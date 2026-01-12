@@ -142,7 +142,7 @@ export default function HomePage() {
               href="/free-quote"
               className="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-accent-600 transition text-lg shadow-lg hover:shadow-xl"
             >
-              Get My Free Quotes →
+              Get 3 Free Quotes →
             </Link>
           </div>
         </div>
