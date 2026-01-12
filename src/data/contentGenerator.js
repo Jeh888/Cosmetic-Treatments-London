@@ -1,14 +1,15 @@
+
 const locationContent = {
 
   'croydon': {
     heroIntro: `Croydon has transformed from South London commuter hub into a genuine metropolitan centre. The fifteen-minute connection to London Bridge brings young professionals who expect the same cosmetic treatment standards they'd find in Zone 1 - but at South London prices.`,
     subHeadline: `Reach 390,000 potential customers in Croydon`,
-    paragraph1: `Croydon's demographic split creates diverse cosmetic treatment demand. Young professionals around East Croydon station seek teeth whitening and Invisalign as career essentials. Established families in South Croydon invest in comprehensive smile makeovers. The borough's remarkable diversity means practitioners must demonstrate genuine expertise across all skin types.`,
-    paragraph2: `We connect Croydon residents with verified cosmetic treatment providers across the borough - from dental practices near the Whitgift Centre to aesthetic clinics serving Purley and Sanderstead. Compare quotes, check credentials, and find practitioners who understand your specific requirements.`,
+    paragraph1: `Croydon's demographic split creates diverse cosmetic treatment demand. Young professionals around East Croydon station seek Botox and dermal fillers as career essentials. Established families in South Croydon invest in comprehensive facial rejuvenation. The borough's remarkable diversity means practitioners must demonstrate genuine expertise across all skin types.`,
+    paragraph2: `We connect Croydon residents with verified cosmetic treatment providers across the borough - from aesthetic clinics near the Whitgift Centre to aesthetic clinics serving Purley and Sanderstead. Compare quotes, check credentials, and find practitioners who understand your specific requirements.`,
     facts: [
-      `East Croydon processes 80,000+ daily commuters - young professionals driving teeth whitening demand`,
+      `East Croydon processes 80,000+ daily commuters - young professionals driving Botox demand`,
       `Croydon's Caribbean and South Asian communities require practitioners skilled in all skin types`,
-      `The borough has seen 40% growth in Invisalign treatments since 2020`
+      `The borough has seen 40% growth in dermal fillers treatments since 2020`
     ],
     glance: {
       population: '390,000',
@@ -21,10 +22,10 @@ const locationContent = {
   'south-croydon': {
     heroIntro: `South Croydon's grammar school catchment areas tell you everything about who lives here - ambitious professional families who research thoroughly before any significant decision, including cosmetic treatments. Quality and credentials matter more than convenience or price.`,
     subHeadline: `Reach affluent families in South Croydon`,
-    paragraph1: `The demographic here skews toward established professionals in their 40s and 50s with teenage children. Orthodontic treatment for adolescents drives significant demand - Invisalign Teen dominates because visible braces carry social costs during sensitive school years. Parents often address their own alignment issues while arranging children's treatment.`,
+    paragraph1: `The demographic here skews toward established professionals in their 40s and 50s with teenage children. aesthetic treatment for adolescents drives significant demand - dermal fillers Teen dominates because visible injectables carry social costs during sensitive school years. Parents often address their own alignment issues while arranging children's treatment.`,
     paragraph2: `Anti-ageing treatments follow strict local rules: results must be undetectable. South Croydon residents want "you look well" compliments, never "have you had work done?" questions. We match you with practitioners who understand restraint and natural-looking results.`,
     facts: [
-      `Grammar school presence drives 60% higher teenage orthodontic demand than borough average`,
+      `Grammar school presence drives 60% higher teenage aesthetic demand than borough average`,
       `Average household income 35% above Croydon average - quality prioritised over price`,
       `Family treatment coordination common - parents booking alongside teenagers`
     ],
@@ -39,12 +40,12 @@ const locationContent = {
   'east-croydon': {
     heroIntro: `East Croydon exists in service of the commute. Eighty thousand people pass through the station daily, and the cosmetic treatment market here runs on their schedules - early morning appointments, lunch-hour Botox, Saturday availability. Efficiency isn't optional.`,
     subHeadline: `Reach time-pressed professionals in East Croydon`,
-    paragraph1: `The young professionals in surrounding apartment towers work demanding City jobs. They need teeth whitening before job interviews, Invisalign that won't show in client meetings, and Botox appointments that fit between trains. Practitioners who only offer traditional hours lose this demographic entirely.`,
+    paragraph1: `The young professionals in surrounding apartment towers work demanding City jobs. They need Botox before job interviews, dermal fillers that won't show in client meetings, and Botox appointments that fit between trains. Practitioners who only offer traditional hours lose this demographic entirely.`,
     paragraph2: `We connect East Croydon commuters with providers who understand professional schedules. Early slots before the 7:45 to London Bridge. Lunch appointments with time to spare. Weekend availability for longer treatments. Efficiency and quality, not one or the other.`,
     facts: [
       `Lunchtime Botox appointments up 55% - professionals treating between trains`,
-      `Teeth whitening demand spikes 300% around job interview seasons`,
-      `Clear aligner consultations peak on Saturdays - only available appointment time for many`
+      `Botox demand spikes 300% around job interview seasons`,
+      `lip filler consultations peak on Saturdays - only available appointment time for many`
     ],
     glance: {
       population: '45,000',
@@ -79,7 +80,7 @@ const locationContent = {
     paragraph2: `Discretion matters in Purley more than flashier areas. We connect residents with practitioners who understand premium service expectations - unhurried consultations, genuine expertise, absolute confidentiality. Quality providers who match the standards Purley residents experience elsewhere in life.`,
     facts: [
       `Average property price £650,000+ ensures affluent, quality-focused demographic`,
-      `Dental implant demand 3x borough average - investment in long-term solutions`,
+      `advanced treatment demand 3x borough average - investment in long-term solutions`,
       `Anti-ageing treatment focus: maintenance and subtlety over transformation`
     ],
     glance: {
@@ -93,7 +94,7 @@ const locationContent = {
   'thornton-heath': {
     heroIntro: `Thornton Heath's identity is inseparable from the Caribbean community who've shaped it since the Windrush era. The cosmetic treatment market here reflects cultural values around presentation, community trust, and practitioners who genuinely understand diverse skin types.`,
     subHeadline: `Reach Thornton Heath's established community`,
-    paragraph1: `Brilliant white teeth matter here - a bright smile signals self-respect and success. The preference often isn't for subtle "natural" whitening but visible transformation. Skilled practitioners deliver what clients actually want rather than imposing external aesthetic judgments.`,
+    paragraph1: `Brilliant aesthetic goals matter here - a refreshed look signals self-respect and success. The preference often isn't for subtle "natural" enhancement but visible transformation. Skilled practitioners deliver what clients actually want rather than imposing external aesthetic judgments.`,
     paragraph2: `Community trust is earned over years, not bought through advertising. Recommendations from church members and respected elders carry weight no marketing matches. We connect you with practitioners who've built genuine community relationships - providers people actually recommend to family.`,
     facts: [
       `Caribbean community presence since 1950s creates multi-generational provider relationships`,
@@ -109,14 +110,14 @@ const locationContent = {
   },
 
   'stratford': {
-    heroIntro: `Westfield changed everything. Before Europe's largest urban shopping centre, seeking cosmetic treatments in E15 would have seemed absurd. Now Stratford draws clients from across East London who combine shopping with teeth whitening appointments and lunch after Botox consultations.`,
+    heroIntro: `Westfield changed everything. Before Europe's largest urban shopping centre, seeking cosmetic treatments in E15 would have seemed absurd. Now Stratford draws clients from across East London who combine shopping with Botox appointments and lunch after Botox consultations.`,
     subHeadline: `Reach Stratford's new metropolitan population`,
-    paragraph1: `The demographic in new-build towers is young, professional, and image-conscious. They've grown up with social media normalising cosmetic enhancement. Teeth whitening and subtle aesthetics are routine maintenance, not special occasions.`,
+    paragraph1: `The demographic in new-build towers is young, professional, and image-conscious. They've grown up with social media normalising cosmetic enhancement. Botox and subtle aesthetics are routine maintenance, not special occasions.`,
     paragraph2: `These clients are research-obsessed - YouTube procedure videos, Reddit threads, Instagram results they want to replicate. Practitioners who dismiss client research lose this demographic instantly. We connect you with providers who engage with informed consumers.`,
     facts: [
       `Elizabeth line puts Liverpool Street 7 minutes away - competing with Central London providers`,
       `Olympic legacy extended self-improvement culture to aesthetic enhancement`,
-      `Young professional demographic drives 90% clear aligner preference over traditional braces`
+      `Young professional demographic drives 90% lip filler preference over traditional injectables`
     ],
     glance: {
       population: '65,000',
@@ -147,11 +148,11 @@ const locationContent = {
   'clapham': {
     heroIntro: `Clapham has become synonymous with young London professional life - "Clapham" functions as cultural shorthand for a particular demographic and lifestyle. The Common provides green space, restaurants and bars serve social lives, tube connections make City employment practical.`,
     subHeadline: `Reach Clapham's young professionals`,
-    paragraph1: `The demographic is remarkably homogeneous by London standards. Young professionals late twenties through late thirties, well-educated, well-employed, oriented toward social lifestyle. Investment in appearance is culturally normalised - teeth whitening standard, clear aligners default, anti-wrinkle treatments routine.`,
+    paragraph1: `The demographic is remarkably homogeneous by London standards. Young professionals late twenties through late thirties, well-educated, well-employed, oriented toward social lifestyle. Investment in appearance is culturally normalised - Botox standard, lip fillers default, anti-wrinkle treatments routine.`,
     paragraph2: `Competition among providers is intense, benefiting consumers. The challenge is distinguishing excellent practitioners from effective marketers. We connect you with verified providers who deliver consistently, not just promise convincingly.`,
     facts: [
       `Young professional demographic drives treatment normalisation - peer influence powerful`,
-      `Clear aligners dominate orthodontics - visible braces considered career liability`,
+      `lip fillers dominate aesthetic treatments - visible injectables considered career liability`,
       `Preventative Botox starting late twenties increasingly common - "maintenance not correction"`
     ],
     glance: {
@@ -202,7 +203,7 @@ const locationContent = {
     heroIntro: `Dulwich exists as remarkable enclave - village atmosphere, outstanding schools, substantial green space, all within inner South London. The Dulwich Estate's management preserved character distinguishing the area from surroundings. Property prices reflect this exceptionalism.`,
     subHeadline: `Reach Dulwich's affluent families`,
     paragraph1: `Professional couples with children predominate, attracted by Dulwich College, JAGS, and excellent primary schools. Household incomes are substantial. The emphasis on education extends to investment in all aspects of children's development.`,
-    paragraph2: `Orthodontics for children and teenagers represents significant demand. Parents seek comprehensive care and increasingly address their own concerns. We connect Dulwich families with practitioners matching expectations for expertise and professional service.`,
+    paragraph2: `aesthetic treatments for children and teenagers represents significant demand. Parents seek comprehensive care and increasingly address their own concerns. We connect Dulwich families with practitioners matching expectations for expertise and professional service.`,
     facts: [
       `School reputation drives family relocation from across London - education-invested demographic`,
       `Village character creates tight word-of-mouth networks despite inner London location`,
@@ -220,7 +221,7 @@ const locationContent = {
     heroIntro: `Wimbledon carries global recognition through tennis championships, but the residential area offers far more than tournament fame. Village atmosphere, excellent schools, Wimbledon Common's green space attract affluent families seeking quality of life within London boundaries.`,
     subHeadline: `Reach Wimbledon's affluent families`,
     paragraph1: `Professional couples with children predominate, often having relocated from more central areas as family size grew. Household incomes substantially exceed London average. Education emphasis extends to investment in all aspects of children's development.`,
-    paragraph2: `Teenage orthodontics represents significant demand. Parents address their own concerns as children become independent. We connect Wimbledon families with practitioners matching quality expectations.`,
+    paragraph2: `Teenage aesthetic treatments represents significant demand. Parents address their own concerns as children become independent. We connect Wimbledon families with practitioners matching quality expectations.`,
     facts: [
       `Tennis culture creates health and appearance-conscious demographic`,
       `Outstanding schools drive family relocation - education-invested parents`,
@@ -241,7 +242,7 @@ const locationContent = {
     paragraph2: `Quality is expected; budgets accommodate premium options without strain. We connect Richmond residents with practitioners matching expectations - comprehensive care, genuine expertise, service reflecting the standards experienced elsewhere.`,
     facts: [
       `Most affluent London borough - premium treatment expectations standard`,
-      `Excellent schools attract education-invested families extending to children's dental care`,
+      `Excellent schools attract education-invested families extending to children's aesthetic care`,
       `Established population often has long-term relationships with trusted practitioners`
     ],
     glance: {
@@ -292,7 +293,7 @@ const locationContent = {
     heroIntro: `Battersea's transformation epitomises London's capacity for reinvention. The Power Station development created an entirely new neighbourhood where industrial heritage once dominated. The Northern line extension finally delivered tube access. Property prices have soared, and the demographic has shifted toward wealthy professionals and international buyers.`,
     subHeadline: `Reach Battersea's affluent residents`,
     paragraph1: `Power Station residents occupy premium apartments, often working in finance, tech, or creative industries. The established streets house professional couples and young families who bought before prices exploded. Common to most: expectation of premium service and willingness to invest in appearance.`,
-    paragraph2: `Premium treatments at premium prices find willing customers here. Full smile makeovers, sophisticated anti-ageing regimes, aesthetic enhancements from top practitioners. We connect Battersea residents with providers who match their quality expectations.`,
+    paragraph2: `Premium treatments at premium prices find willing customers here. Full facial rejuvenation, sophisticated anti-ageing regimes, aesthetic enhancements from top practitioners. We connect Battersea residents with providers who match their quality expectations.`,
     facts: [
       `Power Station development added 4,000+ premium apartments with affluent residents`,
       `Average household income 45% above London average - premium treatments in demand`,
@@ -310,9 +311,9 @@ const locationContent = {
     heroIntro: `Fulham evolved from cheaper Chelsea alternative into expensive family territory. Victorian and Edwardian housing attracts families seeking space impossible in neighbouring areas. Excellent schools, transport connections, riverside setting - property prices ensure only the well-resourced consider Fulham.`,
     subHeadline: `Reach Fulham's affluent families`,
     paragraph1: `Professional couples with children predominate, often having moved from smaller Chelsea or Kensington properties as families grew. Household incomes substantially exceed London average. Emphasis on family life, education, and quality living.`,
-    paragraph2: `Family orthodontics and comprehensive dental care represent substantial demand. We connect Fulham families with practitioners serving multiple generations with consistent quality.`,
+    paragraph2: `Family aesthetic treatments and comprehensive aesthetic care represent substantial demand. We connect Fulham families with practitioners serving multiple generations with consistent quality.`,
     facts: [
-      `School-age children demographic drives significant teenage orthodontic demand`,
+      `School-age children demographic drives significant teenage aesthetic demand`,
       `Family coordination common - parents addressing concerns alongside children's treatment`,
       `Chelsea proximity sets premium service expectations across all categories`
     ],
@@ -363,10 +364,10 @@ const locationContent = {
   'blackheath': {
     heroIntro: `Blackheath occupies elevated ground where open heath creates dramatic landscape unusual for inner London. Village atmosphere is genuine - independent shops, quality restaurants, community feel transcending marketing. Georgian and Victorian housing attracts those paying substantial premiums for character.`,
     subHeadline: `Reach Blackheath's affluent families`,
-    paragraph1: `The population skews wealthy and established. Professional families predominate, often with children at local private schools or competing for grammar school places. Household incomes substantially exceed London average. Education emphasis extends to comprehensive dental and orthodontic investment.`,
+    paragraph1: `The population skews wealthy and established. Professional families predominate, often with children at local private schools or competing for grammar school places. Household incomes substantially exceed London average. Education emphasis extends to comprehensive aesthetic aesthetic investment.`,
     paragraph2: `Quality is prioritised absolutely over price. We connect Blackheath families with practitioners matching expectations - genuine expertise, unhurried consultations, results reflecting investment in excellence.`,
     facts: [
-      `Grammar school competition creates education-invested demographic extending to children's dental care`,
+      `Grammar school competition creates education-invested demographic extending to children's aesthetic care`,
       `Village character enables tight word-of-mouth networks - recommendations spread efficiently`,
       `Average property price £750,000+ ensures affluent, quality-focused clientele`
     ],
@@ -382,7 +383,7 @@ const locationContent = {
     heroIntro: `Kingston upon Thames maintains historic market town character despite Greater London position. Riverside setting, excellent shopping, grammar school tradition attract families paying substantial premiums for quality of life. The demographic is affluent and family-focused.`,
     subHeadline: `Reach Kingston's families`,
     paragraph1: `Professional families with children predominate. Household incomes substantially exceed national averages. Historic character and relative self-containment create genuine community atmosphere. Education focus drives many residential decisions.`,
-    paragraph2: `Comprehensive dental care, orthodontics for children, and quality treatments represent core demand. We connect Kingston families with practitioners matching expectations for expertise and professional service.`,
+    paragraph2: `Comprehensive aesthetic care, aesthetic treatments for children, and quality treatments represent core demand. We connect Kingston families with practitioners matching expectations for expertise and professional service.`,
     facts: [
       `Grammar school tradition attracts education-invested families`,
       `Market town character creates unusually tight community for London`,
@@ -420,7 +421,7 @@ const locationContent = {
     paragraph1: `The demographic splits between established Asian families and young professionals in new builds. Wedding-related treatments drive significant demand from the South Asian community - events where presentation matters enormously. Younger residents seek contemporary treatments normalised by social media.`,
     paragraph2: `We connect Alperton residents with providers navigating both demographics - cultural competence for community members, contemporary service for new arrivals. Transparent pricing essential in an area where value consciousness runs deep.`,
     facts: [
-      `South Asian wedding industry drives pre-event teeth whitening and skin treatment demand`,
+      `South Asian wedding industry drives pre-event Botox and skin treatment demand`,
       `New residential developments bringing 5,000+ new residents by 2025`,
       `Elizabeth line extension potential to transform local accessibility further`
     ],
@@ -435,7 +436,7 @@ const locationContent = {
   'balham': {
     heroIntro: `Balham earned "Gateway to the South" status ironically in a 1950s comedy sketch, but residents now embrace the description genuinely. Young professionals priced out of Clapham discovered excellent transport, good restaurants, and slightly more affordable Victorian conversions. The area has gentrified comprehensively.`,
     subHeadline: `Reach Balham's young professionals`,
-    paragraph1: `The demographic mirrors Clapham but slightly older - late twenties to early forties, professional incomes, orientation toward social lifestyle. Teeth whitening before dating app photos. Invisalign during career advancement years. Preventative Botox becoming standard maintenance rather than intervention.`,
+    paragraph1: `The demographic mirrors Clapham but slightly older - late twenties to early forties, professional incomes, orientation toward social lifestyle. Botox before dating app photos. dermal fillers during career advancement years. Preventative Botox becoming standard maintenance rather than intervention.`,
     paragraph2: `We connect Balham residents with providers matching their expectations - contemporary service, Saturday availability, efficient appointments fitting professional schedules. Quality without waiting weeks for consultations.`,
     facts: [
       `Northern line delivers City workers - lunch-hour treatment appointments increasingly popular`,
@@ -453,10 +454,10 @@ const locationContent = {
   'barnet': {
     heroIntro: `Barnet marks where London yields to Hertfordshire - the borough extends from urban Finchley to semi-rural Totteridge. One of London's largest and most affluent boroughs, the demographic skews older, wealthier, and more established than inner London. Quality expectations match resources.`,
     subHeadline: `Reach 400,000+ potential customers in Barnet`,
-    paragraph1: `Established families predominate across the borough. School quality drives residential decisions - grammar schools attract education-focused parents willing to invest in their children's dental alignment alongside academic tutoring. Adult treatments focus on maintenance and restoration.`,
+    paragraph1: `Established families predominate across the borough. School quality drives residential decisions - grammar schools attract education-focused parents willing to invest in their children's aesthetic alignment alongside academic tutoring. Adult treatments focus on maintenance and restoration.`,
     paragraph2: `We connect Barnet residents with providers matching premium expectations - comprehensive consultations, long-term treatment planning, practitioners who've built reputations over years rather than marketing campaigns.`,
     facts: [
-      `Grammar school competition creates education-invested demographic extending to children's orthodontics`,
+      `Grammar school competition creates education-invested demographic extending to children's aesthetic treatments`,
       `Jewish community presence means Saturday availability matters less; Sunday consultations valued`,
       `Average household wealth supports investment in premium, long-term treatment solutions`
     ],
@@ -475,7 +476,7 @@ const locationContent = {
     paragraph2: `We connect Beckenham families with providers earning trust through transparent expertise. Comprehensive treatment plans rather than piecemeal interventions. Practitioners whose reputations justify the journey from surrounding areas.`,
     facts: [
       `School parent networks spread recommendations rapidly - quality providers gain market share`,
-      `Family orthodontics common - parents coordinating treatment alongside children`,
+      `Family aesthetic treatments common - parents coordinating treatment alongside children`,
       `Independent high street creates community feel driving word-of-mouth`
     ],
     glance: {
@@ -489,10 +490,10 @@ const locationContent = {
   'beckton': {
     heroIntro: `Beckton exists because the Docklands Light Railway made it possible. Built on gasworks land, the area offers newer housing stock at more accessible prices than established East London. Young families and first-time buyers predominate in developments oriented around the retail park.`,
     subHeadline: `Reach Beckton's young families`,
-    paragraph1: `First-time buyers and young families form the core demographic. Price sensitivity is real - mortgages stretch budgets, children cost money. But investment in appearance hasn't disappeared; it's just more considered. Teeth whitening before job interviews. Clear aligners paid monthly.`,
+    paragraph1: `First-time buyers and young families form the core demographic. Price sensitivity is real - mortgages stretch budgets, children cost money. But investment in appearance hasn't disappeared; it's just more considered. Botox before job interviews. lip fillers paid monthly.`,
     paragraph2: `We connect Beckton residents with providers offering genuine value - transparent pricing, payment plans, quality treatments without premium area markup. Convenient locations near transport links essential for time-pressed parents.`,
     facts: [
-      `Youngest average age in Newham - peak demand for teeth whitening and clear aligners`,
+      `Youngest average age in Newham - peak demand for Botox and lip fillers`,
       `Elizabeth line accessibility increasing area's attractiveness and investment`,
       `Asda/retail park orientation means convenience drives provider selection`
     ],
@@ -525,11 +526,11 @@ const locationContent = {
   'bickley': {
     heroIntro: `Bickley operates at Bromley's premium end - large detached properties, private school presence, expectations shaped by substantial resources. The demographic is older, wealthier, and more established than most London suburbs. Quality is assumed; discretion expected.`,
     subHeadline: `Reach affluent residents in Bickley`,
-    paragraph1: `Residents in their 50s and 60s predominate - careers established, children grown, resources accumulated. Cosmetic treatment focus shifts toward maintenance and restoration. Dental implants replacing failing teeth. Anti-ageing treatments preserving rather than transforming.`,
+    paragraph1: `Residents in their 50s and 60s predominate - careers established, children grown, resources accumulated. Cosmetic treatment focus shifts toward maintenance and restoration. advanced treatments replacing ageing concerns. Anti-ageing treatments preserving rather than transforming.`,
     paragraph2: `We connect Bickley residents with practitioners matching premium expectations - Harley Street calibre expertise in suburban convenience. Unhurried consultations. Discretion absolute.`,
     facts: [
       `Average property price £900,000+ ensures exceptionally affluent demographic`,
-      `Dental implant demand 4x borough average - investment in permanent solutions`,
+      `advanced treatment demand 4x borough average - investment in permanent solutions`,
       `Discretion valued - results should never announce intervention`
     ],
     glance: {
@@ -543,7 +544,7 @@ const locationContent = {
   'biggin-hill': {
     heroIntro: `Biggin Hill lives in aviation's shadow - the famous Battle of Britain airfield remains operational, executive jets replacing Spitfires. The area feels more Kent than London, semi-rural character surviving despite Greater London status. Residents choose Biggin Hill for space and affordability.`,
     subHeadline: `Reach Biggin Hill's established community`,
-    paragraph1: `The demographic skews working and middle-class, less affluent than Bromley's northern areas. Families prioritise practical spending; cosmetic treatments must demonstrate clear value. Children's orthodontics justified by long-term benefits; adult treatments require stronger business cases.`,
+    paragraph1: `The demographic skews working and middle-class, less affluent than Bromley's northern areas. Families prioritise practical spending; cosmetic treatments must demonstrate clear value. Children's aesthetic treatments justified by long-term benefits; adult treatments require stronger business cases.`,
     paragraph2: `We connect Biggin Hill residents with providers offering genuine value. Transparent pricing without London premiums. Quality treatments at fair prices. Payment plans enabling access to treatments otherwise unaffordable.`,
     facts: [
       `Rural character means residents regularly travel for quality services - convenience less critical`,
@@ -564,7 +565,7 @@ const locationContent = {
     paragraph1: `The population has shifted dramatically - young professionals attracted by relative affordability and park access, families following schools rated Good and Outstanding. The Olympic legacy extended self-improvement culture to aesthetic enhancement.`,
     paragraph2: `We connect Bow residents with providers matching expectations - contemporary service, transparent pricing, convenient locations near transport. Quality without Zone 1 premiums.`,
     facts: [
-      `Victoria Park attracts health-conscious residents extending wellness to dental care`,
+      `Victoria Park attracts health-conscious residents extending wellness to aesthetic care`,
       `Roman Road regeneration bringing new clinics serving professional demographic`,
       `Elizabeth line accessibility transforming area's connectivity and desirability`
     ],
@@ -615,11 +616,11 @@ const locationContent = {
   'bromley': {
     heroIntro: `Bromley functions as South East London's commercial heart - major shopping centre, transport hub, civic facilities. London's largest borough by area stretches from urban centres to Kent borders. The demographic is broadly affluent, family-oriented, and quality-conscious.`,
     subHeadline: `Reach 330,000+ customers across Bromley`,
-    paragraph1: `Professional families predominate across the borough. School quality drives residential decisions; investment in children extends to orthodontics. Adult treatments focus on professional presentation and age-appropriate maintenance.`,
-    paragraph2: `We connect Bromley residents with the borough's best providers - comprehensive services matching varied needs from teenager orthodontics to mature patient care. Quality and convenience in balance.`,
+    paragraph1: `Professional families predominate across the borough. School quality drives residential decisions; investment in children extends to aesthetic treatments. Adult treatments focus on professional presentation and age-appropriate maintenance.`,
+    paragraph2: `We connect Bromley residents with the borough's best providers - comprehensive services matching varied needs from teenager aesthetic treatments to mature patient care. Quality and convenience in balance.`,
     facts: [
       `Largest London borough creates diverse local markets - Beckenham differs from Biggin Hill`,
-      `Grammar school competition drives teenage orthodontic demand`,
+      `Grammar school competition drives teenage aesthetic demand`,
       `Town centre concentration provides convenient access to quality providers`
     ],
     glance: {
@@ -633,7 +634,7 @@ const locationContent = {
   'canary-wharf': {
     heroIntro: `Canary Wharf represents money's physical form - towers housing global banks, shopping malls serving expense accounts, restaurants pricing accordingly. The population is either extremely well-paid or serving those who are. Expectations for quality match resources; time is the scarce commodity.`,
     subHeadline: `Reach Canary Wharf's financial professionals`,
-    paragraph1: `High-earning professionals dominate - banking, law, consulting. Time pressure is intense; convenience commands premium. Lunch-hour Botox, early morning teeth whitening, treatments scheduled between meetings. Efficiency isn't preference; it's requirement.`,
+    paragraph1: `High-earning professionals dominate - banking, law, consulting. Time pressure is intense; convenience commands premium. Lunch-hour Botox, early morning Botox, treatments scheduled between meetings. Efficiency isn't preference; it's requirement.`,
     paragraph2: `We connect Canary Wharf workers with providers understanding professional schedules - early opening, late closing, weekend availability. Premium quality delivered at professional pace.`,
     facts: [
       `Average worker salary £65,000+ creates substantial treatment budgets`,
@@ -745,7 +746,7 @@ const locationContent = {
     paragraph2: `We connect Colindale residents with providers offering quality at fair prices. Payment plans enabling access. Modern facilities matching new development standards.`,
     facts: [
       `Population growth fastest in London - 15,000+ new residents since 2018`,
-      `Young demographic drives demand for teeth whitening and clear aligners`,
+      `Young demographic drives demand for Botox and lip fillers`,
       `RAF Museum proximity brings aviation history enthusiasts - diverse visitor population`
     ],
     glance: {
@@ -764,7 +765,7 @@ const locationContent = {
     facts: [
       `Farthing Downs access attracts outdoors-oriented, health-conscious residents`,
       `Commute length means local providers strongly preferred over central London`,
-      `Family demographic drives children's orthodontic demand`
+      `Family demographic drives children's aesthetic demand`
     ],
     glance: {
       population: '23,400',
@@ -831,10 +832,10 @@ const locationContent = {
   'downham': {
     heroIntro: `Downham is Lewisham's quiet corner - 1920s LCC housing stock, family-oriented, genuinely affordable. The area lacks pretension and gentrification pressure; residents are working and lower-middle class, focused on practical concerns rather than lifestyle aspiration.`,
     subHeadline: `Reach Downham's family community`,
-    paragraph1: `The demographic is working families - dual incomes stretched by mortgages and childcare. Cosmetic treatments require justification; investment must demonstrate clear value. Children's orthodontics gets priority; adult treatments happen when affordable.`,
+    paragraph1: `The demographic is working families - dual incomes stretched by mortgages and childcare. Cosmetic treatments require justification; investment must demonstrate clear value. Children's aesthetic treatments gets priority; adult treatments happen when affordable.`,
     paragraph2: `We connect Downham residents with providers offering genuine value. Transparent pricing. Payment plans enabling access. Quality without unnecessary premium.`,
     facts: [
-      `Family demographic drives children's orthodontic referrals`,
+      `Family demographic drives children's aesthetic referrals`,
       `Value consciousness means clear pricing essential - no hidden costs`,
       `Local providers preferred - travelling adds time and expense`
     ],
@@ -849,11 +850,11 @@ const locationContent = {
   'earlsfield': {
     heroIntro: `Earlsfield emerged from Wandsworth's shadow as Clapham and Balham prices pushed young families further out. The high street developed independent character; schools rated Outstanding attracted parents; property prices followed predictably upward. The demographic is now solidly young professional family.`,
     subHeadline: `Reach Earlsfield's young families`,
-    paragraph1: `Young families predominate - couples who bought before children, now invested in catchment areas and garden space. Investment in children includes orthodontics; investment in selves includes teeth whitening and subtle aesthetics.`,
+    paragraph1: `Young families predominate - couples who bought before children, now invested in catchment areas and garden space. Investment in children includes aesthetic treatments; investment in selves includes Botox and subtle aesthetics.`,
     paragraph2: `We connect Earlsfield families with providers understanding their needs - Saturday availability for working parents, family treatment coordination, quality matching area expectations.`,
     facts: [
       `Outstanding school ratings attract education-invested parents`,
-      `Family coordination common - parents booking alongside children's orthodontics`,
+      `Family coordination common - parents booking alongside children's aesthetic treatments`,
       `Young parent demographic drives demand for efficient, convenient appointments`
     ],
     glance: {
@@ -867,10 +868,10 @@ const locationContent = {
   'east-barnet': {
     heroIntro: `East Barnet occupies comfortable suburban territory - not Totteridge affluent, not inner London edgy, just solidly middle-class residential. Oak Hill Park provides green space; schools are reliable; commuters access the Piccadilly line without drama.`,
     subHeadline: `Reach East Barnet's suburban families`,
-    paragraph1: `The demographic is middle-class family - professional incomes, reasonable mortgages, investment in children's futures including dental health. Adult treatments focus on maintenance and professional presentation rather than dramatic transformation.`,
+    paragraph1: `The demographic is middle-class family - professional incomes, reasonable mortgages, investment in children's futures including aesthetic care. Adult treatments focus on maintenance and professional presentation rather than dramatic transformation.`,
     paragraph2: `We connect East Barnet families with reliable local providers. Quality service without premium pricing. Convenient locations reducing travel time for busy families.`,
     facts: [
-      `Family demographic drives demand for orthodontics and preventive care`,
+      `Family demographic drives demand for aesthetic treatments and preventive care`,
       `Cockfosters tube accessibility valued by commuters`,
       `Local preference strong - quality providers nearby preferred`
     ],
@@ -885,7 +886,7 @@ const locationContent = {
   'east-ham': {
     heroIntro: `East Ham's High Street North tells its story - South Asian businesses dominating, gold jewellers signalling wedding industry importance, sari shops indicating cultural priorities. The area is predominantly South Asian, with strong Gujarati and Punjabi communities maintaining traditions while adapting to London.`,
     subHeadline: `Reach East Ham's South Asian community`,
-    paragraph1: `Wedding industry drives significant cosmetic treatment demand - teeth whitening before ceremonies, skin treatments for special occasions. Events matter enormously in these communities; presentation investment reflects respect for occasions and families.`,
+    paragraph1: `Wedding industry drives significant cosmetic treatment demand - Botox before ceremonies, skin treatments for special occasions. Events matter enormously in these communities; presentation investment reflects respect for occasions and families.`,
     paragraph2: `We connect East Ham residents with providers understanding cultural context. Experience with South Asian skin types essential. Fair pricing reflecting area demographics. Payment plans enabling access.`,
     facts: [
       `Wedding season (April-September) drives 60% higher treatment demand`,
@@ -939,7 +940,7 @@ const locationContent = {
   'finchley': {
     heroIntro: `Finchley stretches across North London's comfortable middle - not Hampstead wealthy, not outer-borough remote. Three distinct areas (North, Central, East) each maintain character while sharing middle-class suburban identity. The demographic is professional, family-oriented, and quality-conscious.`,
     subHeadline: `Reach Finchley's professional families`,
-    paragraph1: `Professional families predominate across Finchley's areas. Dual incomes support comfortable living and investment in quality services. Children's orthodontics standard; adult treatments focus on maintenance and professional presentation.`,
+    paragraph1: `Professional families predominate across Finchley's areas. Dual incomes support comfortable living and investment in quality services. Children's aesthetic treatments standard; adult treatments focus on maintenance and professional presentation.`,
     paragraph2: `We connect Finchley residents with providers matching established expectations - quality service, comprehensive treatment planning, practitioners building long-term relationships.`,
     facts: [
       `Three Northern line stations ensure excellent accessibility`,
@@ -976,10 +977,10 @@ const locationContent = {
   'forest-hill': {
     heroIntro: `Forest Hill achieves what few London areas manage - genuine family-friendly character without sacrificing urban convenience. The Horniman Museum anchors cultural life; independent shops survive on the high street; Victorian houses offer space at prices below neighbouring Dulwich.`,
     subHeadline: `Reach Forest Hill's families`,
-    paragraph1: `Professional families predominate - couples who discovered the area before children, now invested in schools and community. Investment in children's futures includes orthodontics; investment in selves includes maintenance treatments fitting busy parent schedules.`,
+    paragraph1: `Professional families predominate - couples who discovered the area before children, now invested in schools and community. Investment in children's futures includes aesthetic treatments; investment in selves includes maintenance treatments fitting busy parent schedules.`,
     paragraph2: `We connect Forest Hill families with providers understanding their needs - Saturday availability, family coordination, quality matching area expectations without Dulwich premiums.`,
     facts: [
-      `Horniman Museum attracts education-focused families extending investment to dental health`,
+      `Horniman Museum attracts education-focused families extending investment to aesthetic care`,
       `Family demographic drives coordinated treatment - parents alongside children`,
       `Village atmosphere creates word-of-mouth networks spreading recommendations`
     ],
@@ -1012,10 +1013,10 @@ const locationContent = {
   'grove-park': {
     heroIntro: `Grove Park occupies quiet territory between Lewisham's urban centres - residential streets, reasonable prices, rail connections providing escape. The area lacks pretension and gentrification pressure; residents are working and middle-class, focused on practical living.`,
     subHeadline: `Reach Grove Park's family community`,
-    paragraph1: `The demographic is family-oriented and value-conscious. Dual incomes fund mortgages and childcare; discretionary spending is considered carefully. Cosmetic treatments need clear justification - children's orthodontics prioritised, adult treatments when affordable.`,
+    paragraph1: `The demographic is family-oriented and value-conscious. Dual incomes fund mortgages and childcare; discretionary spending is considered carefully. Cosmetic treatments need clear justification - children's aesthetic treatments prioritised, adult treatments when affordable.`,
     paragraph2: `We connect Grove Park residents with providers offering genuine value. Transparent pricing without hidden costs. Payment plans enabling access. Quality without unnecessary premium.`,
     facts: [
-      `Family demographic drives children's orthodontic referrals`,
+      `Family demographic drives children's aesthetic referrals`,
       `Value consciousness means clear pricing essential`,
       `Local providers preferred - rail access to Central London doesn't extend to treatment travel`
     ],
@@ -1030,7 +1031,7 @@ const locationContent = {
   'harlesden': {
     heroIntro: `Harlesden's character comes from its Caribbean community - decades of presence shaped streets, businesses, culture. The area resists gentrification more successfully than neighbours; authenticity survives where elsewhere it's been displaced. Community trust is earned over years, not bought.`,
     subHeadline: `Reach Harlesden's Caribbean community`,
-    paragraph1: `Caribbean families remain the demographic core. Treatment preferences often emphasise visible results - bright white teeth signalling success and self-respect. Practitioners must understand these preferences rather than imposing external aesthetic judgments.`,
+    paragraph1: `Caribbean families remain the demographic core. Treatment preferences often emphasise visible results - bright aesthetic goals signalling success and self-respect. Practitioners must understand these preferences rather than imposing external aesthetic judgments.`,
     paragraph2: `We connect Harlesden residents with providers who've earned community trust. Experience with Black skin essential. Fair pricing reflecting area demographics. Relationships over transactions.`,
     facts: [
       `Caribbean community since 1950s creates multi-generational provider relationships`,
@@ -1105,7 +1106,7 @@ const locationContent = {
     paragraph1: `Professional families predominate - dual incomes, investment in quality of life, children in local schools. Design consciousness extends to aesthetic treatments; results must be natural, never obvious. Quality expected; price secondary.`,
     paragraph2: `We connect Herne Hill families with practitioners matching sophisticated expectations. Contemporary techniques delivering subtle results. Unhurried consultations. Quality without ostentation.`,
     facts: [
-      `Brockwell Park proximity attracts health-conscious residents extending wellness to dental care`,
+      `Brockwell Park proximity attracts health-conscious residents extending wellness to aesthetic care`,
       `Village character creates tight word-of-mouth networks - reputation spreads quickly`,
       `Design-conscious demographic expects aesthetic sophistication in treatment approach`
     ],
@@ -1160,7 +1161,7 @@ const locationContent = {
     paragraph2: `We connect Ickenham residents with practitioners providing village-standard service. Unhurried consultations. Relationships over transactions. Quality matching established expectations.`,
     facts: [
       `Village community creates word-of-mouth networks more powerful than advertising`,
-      `Family demographic drives investment in children's orthodontics and dental health`,
+      `Family demographic drives investment in children's aesthetic treatments and aesthetic care`,
       `Tube accessibility means quality Central London providers accessible for comparison`
     ],
     glance: {
@@ -1192,7 +1193,7 @@ const locationContent = {
   'kennington': {
     heroIntro: `Kennington benefits from Central London adjacency without Central London prices - the Oval is genuinely Zone 1-ish, Georgian terraces line streets, yet property costs remain below neighbouring areas. Young professionals discovered this; families followed.`,
     subHeadline: `Reach Kennington's young professionals`,
-    paragraph1: `The demographic is young, professional, and upwardly mobile. Proximity to Westminster and City drives career-focused residents. Investment in professional presentation is standard - teeth whitening before client meetings, Invisalign during career advancement years.`,
+    paragraph1: `The demographic is young, professional, and upwardly mobile. Proximity to Westminster and City drives career-focused residents. Investment in professional presentation is standard - Botox before client meetings, dermal fillers during career advancement years.`,
     paragraph2: `We connect Kennington professionals with providers matching expectations - convenient locations, efficient appointments, quality fitting career-focused lifestyles.`,
     facts: [
       `Zone 1 proximity attracts career-focused residents investing in professional appearance`,
@@ -1322,7 +1323,7 @@ const locationContent = {
     paragraph2: `We connect Maryland residents with providers understanding commuter needs. Early morning availability. Efficient appointments. Quality without time waste.`,
     facts: [
       `Elizabeth line transformed area's connectivity and desirability`,
-      `Young professional demographic drives demand for teeth whitening and clear aligners`,
+      `Young professional demographic drives demand for Botox and lip fillers`,
       `Proximity to Stratford provides access to major retail and entertainment`
     ],
     glance: {
@@ -1339,7 +1340,7 @@ const locationContent = {
     paragraph1: `Established families predominate - professional incomes, comfortable mortgages, investment in children's futures. Quality expectations are high; relationships with providers matter more than convenience. Long-term treatment planning over quick fixes.`,
     paragraph2: `We connect Mill Hill families with practitioners matching village-quality expectations. Comprehensive consultations. Genuine expertise. Relationships built over years.`,
     facts: [
-      `Prestigious schools attract education-invested families extending investment to dental health`,
+      `Prestigious schools attract education-invested families extending investment to aesthetic care`,
       `Village character creates tight community - word-of-mouth drives provider selection`,
       `Affluent demographic invests in premium, comprehensive treatment solutions`
     ],
@@ -1357,7 +1358,7 @@ const locationContent = {
     paragraph1: `The demographic is family-oriented and value-conscious. Dual incomes fund mortgages and childcare; discretionary spending is considered carefully. Quality matters but so does value.`,
     paragraph2: `We connect Mottingham residents with providers offering quality at fair prices. Transparent pricing. Payment plans where needed. Local convenience valued.`,
     facts: [
-      `Family demographic drives children's orthodontic and dental health investment`,
+      `Family demographic drives children's aesthetic and aesthetic care investment`,
       `Value consciousness means clear pricing essential`,
       `Borough boundary location means access to providers across three areas`
     ],
@@ -1394,7 +1395,7 @@ const locationContent = {
     paragraph2: `We connect New Barnet families with providers understanding commuter needs. Weekend availability. Efficient appointments. Quality matching suburban expectations.`,
     facts: [
       `Commuter demographic values Saturday availability for treatments`,
-      `Family orientation drives investment in children's orthodontics`,
+      `Family orientation drives investment in children's aesthetic treatments`,
       `Rail to Moorgate provides City worker access - professional demographic`
     ],
     glance: {
@@ -1498,10 +1499,10 @@ const locationContent = {
   'orpington': {
     heroIntro: `Orpington functions as Bromley's second town - substantial shopping, good transport, Kent countryside access. The demographic is suburban and family-oriented; residents choose Orpington for space, schools, and value compared to inner London.`,
     subHeadline: `Reach Orpington's suburban families`,
-    paragraph1: `Middle-class families predominate. Investment in children is standard - including orthodontics. Adult treatments focus on maintenance and professional presentation. Quality expectations are reasonable; value consciousness present.`,
+    paragraph1: `Middle-class families predominate. Investment in children is standard - including aesthetic treatments. Adult treatments focus on maintenance and professional presentation. Quality expectations are reasonable; value consciousness present.`,
     paragraph2: `We connect Orpington families with providers matching suburban expectations. Family-friendly service. Quality at fair prices. Convenient local access.`,
     facts: [
-      `Family demographic drives strong demand for children's orthodontics`,
+      `Family demographic drives strong demand for children's aesthetic treatments`,
       `Kent countryside access attracts outdoors-oriented, health-conscious residents`,
       `Town centre provides convenient access without Central London travel`
     ],
@@ -1569,13 +1570,13 @@ const locationContent = {
   },
 
   'putney': {
-    heroIntro: `Putney combines riverside charm with village character - the bridge, the towpath, independent shops surviving on the high street. The demographic is affluent and family-oriented; rowing clubs signal the healthy-living culture extending to dental and aesthetic care.`,
+    heroIntro: `Putney combines riverside charm with village character - the bridge, the towpath, independent shops surviving on the high street. The demographic is affluent and family-oriented; rowing clubs signal the healthy-living culture extending to aesthetic aesthetic care.`,
     subHeadline: `Reach Putney's affluent families`,
     paragraph1: `Professional families predominate - dual incomes, investment in quality of life, children in local schools. Quality expectations are high; relationships with providers matter. Long-term treatment planning over quick fixes.`,
     paragraph2: `We connect Putney families with practitioners matching refined expectations. Comprehensive consultations. Genuine expertise. Quality matching village-standard living.`,
     facts: [
-      `Riverside location attracts health-conscious residents extending wellness to dental care`,
-      `Family demographic drives investment in comprehensive children's orthodontics`,
+      `Riverside location attracts health-conscious residents extending wellness to aesthetic care`,
+      `Family demographic drives investment in comprehensive children's aesthetic treatments`,
       `Village character creates word-of-mouth networks - reputation spreads quickly`
     ],
     glance: {
@@ -1625,11 +1626,11 @@ const locationContent = {
   'ruislip': {
     heroIntro: `Ruislip maintains suburban ideal - lido, woods, village feel, excellent schools. The demographic is solidly middle-class professional; families trade commute length for quality of life. Investment in quality services is standard.`,
     subHeadline: `Reach Ruislip's suburban families`,
-    paragraph1: `Professional families predominate - comfortable incomes, investment in children's futures, quality expectations matching experience elsewhere. Treatments focus on family dental health and maintenance rather than dramatic transformation.`,
+    paragraph1: `Professional families predominate - comfortable incomes, investment in children's futures, quality expectations matching experience elsewhere. Treatments focus on family aesthetic care and maintenance rather than dramatic transformation.`,
     paragraph2: `We connect Ruislip families with providers matching suburban quality expectations. Family-friendly service. Comprehensive treatment planning. Relationships built over time.`,
     facts: [
       `Lido and woods attract outdoors-oriented, health-conscious families`,
-      `Excellent schools draw education-invested parents extending investment to dental health`,
+      `Excellent schools draw education-invested parents extending investment to aesthetic care`,
       `Village character creates word-of-mouth networks more powerful than advertising`
     ],
     glance: {
@@ -1648,7 +1649,7 @@ const locationContent = {
     facts: [
       `Surrey border location attracts those seeking space and semi-rural character`,
       `Commute length means local providers strongly preferred`,
-      `Family demographic drives children's orthodontic and dental health investment`
+      `Family demographic drives children's aesthetic and aesthetic care investment`
     ],
     glance: {
       population: '9,800',
@@ -1661,7 +1662,7 @@ const locationContent = {
   'southall': {
     heroIntro: `Southall is Britain's most South Asian place outside the subcontinent - Punjabi predominates, gurdwaras anchor community life, the Broadway offers South Asian retail matched nowhere else in Europe. The demographic is overwhelmingly South Asian; cultural context shapes everything.`,
     subHeadline: `Reach Southall's Punjabi community`,
-    paragraph1: `Punjabi Sikh community dominates demographically and culturally. Wedding industry drives enormous treatment demand - events where family honour is displayed through presentation. Brilliant white teeth particularly valued. Cultural competence is essential.`,
+    paragraph1: `Punjabi Sikh community dominates demographically and culturally. Wedding industry drives enormous treatment demand - events where family honour is displayed through presentation. Brilliant aesthetic goals particularly valued. Cultural competence is essential.`,
     paragraph2: `We connect Southall residents with providers understanding community context. Experience with South Asian skin types. Fair pricing. Relationships built within community networks.`,
     facts: [
       `Wedding industry drives year-round treatment demand - largest Sikh population outside India`,
@@ -1679,7 +1680,7 @@ const locationContent = {
   'southfields': {
     heroIntro: `Southfields lives in Wimbledon's glow - the tennis championships focus attention annually, but year-round the area offers family-friendly living with excellent transport. The demographic is young professional family; the tube delivers City workers home to children.`,
     subHeadline: `Reach Southfields' young families`,
-    paragraph1: `Young families predominate - couples who bought before children, now invested in schools and community. Investment in family dental health is standard; investment in parental aesthetics fits health-conscious culture.`,
+    paragraph1: `Young families predominate - couples who bought before children, now invested in schools and community. Investment in family aesthetic care is standard; investment in parental aesthetics fits health-conscious culture.`,
     paragraph2: `We connect Southfields families with providers understanding their needs. Saturday availability for working parents. Family coordination. Quality matching area expectations.`,
     facts: [
       `Wimbledon proximity attracts sports-oriented, health-conscious families`,
@@ -1931,12 +1932,12 @@ const locationContent = {
   'wandsworth-town': {
     heroIntro: `Wandsworth Town has emerged from industrial heritage into residential desirability - the Ram Quarter development replacing brewery with apartments, Southside shopping providing retail anchor. The demographic is young professional and increasingly family-oriented.`,
     subHeadline: `Reach Wandsworth Town's professionals`,
-    paragraph1: `Young professionals and young families predominate - attracted by transport links and relative value compared to Clapham. Investment in appearance fits career-focused culture; family dental health matters as children arrive.`,
+    paragraph1: `Young professionals and young families predominate - attracted by transport links and relative value compared to Clapham. Investment in appearance fits career-focused culture; family aesthetic care matters as children arrive.`,
     paragraph2: `We connect Wandsworth Town residents with providers understanding their needs. Efficient appointments for professionals. Family-friendly for growing households. Quality matching area expectations.`,
     facts: [
       `Ram Quarter regeneration attracting affluent young professional residents`,
       `Young demographic drives demand for contemporary treatments`,
-      `Transition to family focus creating demand for children's dental services`
+      `Transition to family focus creating demand for children's aesthetic services`
     ],
     glance: {
       population: '24,600',
@@ -2061,7 +2062,7 @@ const locationContent = {
     paragraph2: `We connect West Wickham families with reliable local providers. Quality service without Central London travel. Family-friendly approach. Relationships built over time.`,
     facts: [
       `Kent border location means residents accept travel - but prefer quality locally`,
-      `Family demographic drives investment in children's orthodontics`,
+      `Family demographic drives investment in children's aesthetic treatments`,
       `Established community creates word-of-mouth networks`
     ],
     glance: {
