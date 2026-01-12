@@ -15,14 +15,13 @@ export default function HomePage() {
 
   return (
     <>
-     {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069')" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70" />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
