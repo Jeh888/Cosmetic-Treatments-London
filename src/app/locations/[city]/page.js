@@ -1,11 +1,9 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import LeadForm from '@/components/LeadForm';
-import ServiceCard from '@/components/ServiceCard';
 import FAQAccordion from '@/components/FAQAccordion';
 import { getAllLocations, getLocationBySlug, getLocationsByBorough, getAllLocationSlugs } from '@/data/locations';
 import { services } from '@/data/services';
-import { getGeneralFaqs } from '@/data/faqs';
 
 export async function generateStaticParams() {
   return getAllLocationSlugs().map((slug) => ({ city: slug }));
@@ -37,23 +35,17 @@ export default function CityPage({ params }) {
     .filter(l => l.slug !== location.slug)
     .slice(0, 8);
 
-  const faqs = getGeneralFaqs().slice(0, 5).map(faq => ({
-    ...faq,
-    question: faq.question.replace('this service', `finding providers in ${location.name}`),
-  }));
-
   return (
     <>
-       {/* Hero - ~80 words */}
-      <section className="relative bg-gray-900 text-white py-16 md:py-20">
-        {/* Background Image */}
+      {/* Hero */}
+      <section className="relative bg-gray-900 text-white min-h-[500px]">
         <div 
-          className="absolute inset-0 bg-cover bg-center opacity-30"
+          className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/85 to-gray-900/40" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <nav className="text-gray-300 text-sm mb-4">
@@ -67,31 +59,39 @@ export default function CityPage({ params }) {
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
                 Cosmetic Treatments in {location.name}
               </h1>
-              <p className="text-xl text-gray-300 mb-6">
-                Compare verified cosmetic treatment providers in {location.name} and the surrounding {location.borough} area. Get free quotes for teeth whitening, Invisalign, Botox, dermal fillers, veneers, and more from qualified local practitioners.
+              <p className="text-xl text-gray-300 mb-8">
+                Compare verified cosmetic dentists and aesthetic clinics in {location.name}. Get free quotes within 2 hours.
               </p>
               
-              <div className="flex items-center space-x-6 text-sm text-gray-300">
-                <span>Local providers</span>
-                <span>•</span>
-                <span>Free quotes</span>
-                <span>•</span>
-                <span>Verified practitioners</span>
+              {/* Trust Badges */}
+              <div className="grid grid-cols-3 gap-4">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold text-white">50+</div>
+                  <div className="text-xs text-gray-300">Local Clinics</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold text-white">4.9/5</div>
+                  <div className="text-xs text-gray-300">Rating</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-lg p-3 text-center">
+                  <div className="text-xl font-bold text-white">2hr</div>
+                  <div className="text-xs text-gray-300">Response</div>
+                </div>
               </div>
             </div>
 
             <div>
               <LeadForm 
                 preselectedLocation={location.slug}
-                variant="hero"
                 title={`Get Quotes in ${location.name}`}
-                subtitle="Compare local providers"
+                subtitle="Top local clinics will call you within 2 hours"
               />
             </div>
           </div>
         </div>
       </section>
-      {/* City Overview - ~100 words */}
+
+      {/* About Area */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -101,49 +101,32 @@ export default function CityPage({ params }) {
             {location.description}
           </p>
           <p className="text-gray-600">
-            {location.businessContext} With a population of approximately {location.population}, {location.name} is home to a diverse community seeking quality cosmetic treatments. The area's excellent transport links and local amenities make it convenient for attending consultations and treatment appointments with nearby providers.
+            {location.businessContext} With a population of approximately {location.population}, {location.name} is home to a diverse community seeking quality cosmetic treatments.
           </p>
         </div>
       </section>
 
-      {/* Why Cosmetic Treatments Matter - ~100 words */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Why {location.name} Residents Choose Cosmetic Treatments
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Cosmetic treatments have become increasingly popular among {location.name} residents looking to enhance their appearance and boost their confidence. From professionals wanting to make a strong impression in their careers to individuals preparing for special occasions, there are many reasons why people invest in cosmetic dental and aesthetic treatments.
-          </p>
-          <p className="text-gray-600">
-            Having access to qualified local providers means shorter travel times, easier follow-up appointments, and the convenience of treatment close to home or work. Finding a trusted provider in the {location.borough} area ensures continuity of care and makes maintaining results much simpler.
-          </p>
-        </div>
-      </section>
-
-      {/* Available Services - ~120 words */}
-      <section className="py-16">
+      {/* Available Services */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            Cosmetic Treatments Available in {location.name}
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Treatments Available in {location.name}
           </h2>
           <p className="text-gray-600 mb-8">
-            Find verified providers offering a full range of cosmetic dental and aesthetic treatments in {location.name}. Each treatment page connects you with qualified practitioners who serve the {location.borough} area. Compare prices, read about procedures, and request free quotes from local providers.
+            Compare prices from verified providers for these treatments
           </p>
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {services.map((service) => (
               <Link
                 key={service.slug}
                 href={`/locations/${location.slug}/${service.slug}`}
-                className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-200 transition"
+                className="group bg-white rounded-xl p-5 shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-200 transition"
               >
-                <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition mb-2">
-                  {service.name} in {location.name}
+                <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition mb-1">
+                  {service.name}
                 </h3>
-                <p className="text-sm text-gray-600 mb-3">
-                  {service.shortDescription}
-                </p>
+                <p className="text-sm text-gray-500 mb-2">{service.shortDescription}</p>
                 <span className="text-primary-600 text-sm font-medium">{service.priceRange}</span>
               </Link>
             ))}
@@ -151,7 +134,7 @@ export default function CityPage({ params }) {
         </div>
       </section>
 
-      {/* How It Works - ~80 words */}
+      {/* How It Works */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">
@@ -159,55 +142,37 @@ export default function CityPage({ params }) {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center font-bold mx-auto mb-4">1</div>
+              <div className="w-14 h-14 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center font-bold text-xl mx-auto mb-4">1</div>
               <h3 className="font-semibold text-gray-900 mb-2">Choose Treatment</h3>
-              <p className="text-gray-600 text-sm">Select the cosmetic treatment you're interested in from the options above</p>
+              <p className="text-gray-600 text-sm">Select from the options above</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center font-bold mx-auto mb-4">2</div>
-              <h3 className="font-semibold text-gray-900 mb-2">Request Quotes</h3>
-              <p className="text-gray-600 text-sm">Submit a quick form to receive quotes from verified {location.name} providers</p>
+              <div className="w-14 h-14 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center font-bold text-xl mx-auto mb-4">2</div>
+              <h3 className="font-semibold text-gray-900 mb-2">Get Quotes</h3>
+              <p className="text-gray-600 text-sm">Receive calls from local clinics</p>
             </div>
             <div className="text-center">
-              <div className="w-12 h-12 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center font-bold mx-auto mb-4">3</div>
+              <div className="w-14 h-14 bg-primary-100 text-primary-600 rounded-xl flex items-center justify-center font-bold text-xl mx-auto mb-4">3</div>
               <h3 className="font-semibold text-gray-900 mb-2">Compare & Book</h3>
-              <p className="text-gray-600 text-sm">Review quotes, check credentials, and book with your chosen provider</p>
+              <p className="text-gray-600 text-sm">Choose the best fit for you</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Local Industries - ~60 words */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            {location.name}'s Local Economy
-          </h2>
-          <p className="text-gray-600 mb-4">
-            {location.name} has a thriving local economy with key industries including {location.industries.slice(0, 4).join(', ')}. Professionals working in these sectors often seek cosmetic treatments to maintain a polished, confident appearance in their careers.
-          </p>
-          <p className="text-gray-600">
-            Whether preparing for important presentations, client meetings, or simply wanting to look and feel their best, {location.name} residents can find qualified cosmetic treatment providers conveniently located in the area.
-          </p>
-        </div>
-      </section>
-
-      {/* Nearby Areas - ~50 words */}
+      {/* Nearby Areas */}
       {nearbyLocations.length > 0 && (
-        <section className="py-12">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Areas Near {location.name}
             </h2>
-            <p className="text-gray-600 mb-6">
-              Providers serving {location.name} often also cover these nearby areas in {location.borough}. Explore cosmetic treatment options in surrounding locations.
-            </p>
             <div className="flex flex-wrap gap-3">
               {nearbyLocations.map((nearby) => (
                 <Link
                   key={nearby.slug}
                   href={`/locations/${nearby.slug}`}
-                  className="px-4 py-2 bg-gray-100 rounded-lg text-gray-700 hover:bg-primary-100 hover:text-primary-700 transition"
+                  className="px-4 py-2 bg-white rounded-lg text-gray-700 hover:bg-primary-100 hover:text-primary-700 transition border border-gray-200"
                 >
                   {nearby.name}
                 </Link>
@@ -217,40 +182,36 @@ export default function CityPage({ params }) {
         </section>
       )}
 
-      {/* FAQs - ~150 words */}
-      <section className="py-16 bg-gray-50">
+      {/* FAQs */}
+      <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">
-            Finding Cosmetic Treatments in {location.name}: FAQs
+            FAQs: Cosmetic Treatments in {location.name}
           </h2>
           <FAQAccordion faqs={[
             {
-              question: `How do I find a verified cosmetic treatment provider in ${location.name}?`,
-              answer: `Submit a quote request through this platform specifying ${location.name} as your location. Verified providers who serve the area will contact you with personalised quotes within 24 hours. All practitioners in the network are qualified professionals with appropriate registrations and insurance.`
+              question: `How do I find a cosmetic treatment provider in ${location.name}?`,
+              answer: `Submit a quote request through our form specifying ${location.name} as your location. Up to 3 verified providers will contact you within 2 hours with personalised quotes.`
             },
             {
-              question: `What cosmetic treatments are available in ${location.name}?`,
-              answer: `Providers in ${location.name} and the ${location.borough} area offer a full range of treatments including teeth whitening, Invisalign, Botox, dermal fillers, veneers, dental bonding, lip fillers, crowns, and comprehensive smile makeovers. Compare quotes to find the right provider for your specific needs.`
+              question: `What treatments are available in ${location.name}?`,
+              answer: `Providers in ${location.name} offer teeth whitening, Invisalign, Botox, dermal fillers, veneers, dental bonding, lip fillers, crowns, and smile makeovers.`
             },
             {
               question: `How much do cosmetic treatments cost in ${location.name}?`,
-              answer: `Prices vary depending on the treatment and provider. Getting multiple quotes allows comparison of value across different practitioners. Many providers offer payment plans and finance options to make treatments more accessible.`
+              answer: `Prices vary by treatment and provider. Getting multiple quotes helps you compare. Many clinics offer payment plans and finance options.`
             },
             {
               question: `Are consultations free in ${location.name}?`,
-              answer: `Many providers offer free initial consultations where they assess your needs and provide detailed treatment plans and pricing. This is confirmed when providers respond to your quote request through this platform.`
+              answer: `Many providers offer free initial consultations. This is confirmed when clinics respond to your quote request.`
             },
-            {
-              question: `Can I find providers who work evenings or weekends in ${location.name}?`,
-              answer: `Yes, many providers in the ${location.borough} area offer flexible appointment times including evenings and weekends. Mention your scheduling preferences when requesting quotes and providers will confirm their availability.`
-            }
           ]} />
         </div>
       </section>
 
-      {/* Other Borough Locations - ~30 words */}
+      {/* Other Borough Locations */}
       {boroughLocations.length > 0 && (
-        <section className="py-12">
+        <section className="py-12 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
               Other Areas in {location.borough}
@@ -260,7 +221,7 @@ export default function CityPage({ params }) {
                 <Link
                   key={loc.slug}
                   href={`/locations/${loc.slug}`}
-                  className="px-4 py-3 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-primary-300 hover:text-primary-600 transition text-center"
+                  className="px-4 py-3 bg-white rounded-lg border border-gray-200 text-gray-700 hover:border-primary-300 hover:text-primary-600 transition text-center text-sm"
                 >
                   {loc.name}
                 </Link>
@@ -271,17 +232,17 @@ export default function CityPage({ params }) {
       )}
 
       {/* Final CTA */}
-      <section className="py-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <section className="py-16 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Find Your {location.name} Provider Today
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
-            Compare verified cosmetic treatment providers in {location.name}. Get free, no-obligation quotes within 24 hours.
+          <p className="text-xl text-gray-300 mb-8">
+            Get free quotes from verified clinics within 2 hours
           </p>
           <Link
             href="/free-quote"
-            className="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg"
+            className="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-accent-600 transition text-lg shadow-lg"
           >
             Get Free Quotes →
           </Link>
