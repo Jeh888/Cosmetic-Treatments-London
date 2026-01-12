@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const metadata = {
   title: 'About | Cosmetic Treatments London | Free Provider Comparison',
-  description: 'Learn how this free comparison service connects you with verified cosmetic treatment providers across London. Find the best teeth whitening, Botox, fillers, and dental services.',
+  description: 'Learn how this free comparison service connects you with verified aesthetic treatment providers across London. Find the best Botox, fillers, and skin treatment clinics.',
 };
 
 export default function AboutPage() {
@@ -15,7 +15,7 @@ export default function AboutPage() {
             About This Service
           </h1>
           <p className="text-xl text-primary-100">
-            Helping London residents find the best cosmetic treatment providers since 2020
+            Helping London residents find the best aesthetic treatment providers since 2020
           </p>
         </div>
       </section>
@@ -26,7 +26,7 @@ export default function AboutPage() {
           <div className="prose prose-lg max-w-none">
             <h2>Connecting You With Verified Providers</h2>
             <p>
-              This free comparison service was created to help London residents navigate the crowded cosmetic treatment market. With hundreds of clinics and practitioners offering everything from teeth whitening to full smile makeovers, finding the right provider can be overwhelming.
+              This free comparison service was created to help London residents navigate the crowded aesthetic treatment market. With hundreds of clinics and practitioners offering everything from Botox to advanced skin treatments, finding the right provider can be overwhelming.
             </p>
             <p>
               The platform simplifies this process by connecting you with verified, qualified practitioners who match your specific needs and location. Simply submit a quote request, and up to three providers will contact you with personalised quotes – completely free and with no obligation.
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
             <h2>Why Use a Comparison Service?</h2>
             <p>
-              Cosmetic treatment prices in London vary dramatically. The same procedure can cost twice as much at one clinic compared to another, without any difference in quality. By comparing quotes, you ensure you're getting fair value while still receiving treatment from qualified professionals.
+              Aesthetic treatment prices in London vary dramatically. The same procedure can cost twice as much at one clinic compared to another, without any difference in quality. By comparing quotes, you ensure you're getting fair value while still receiving treatment from qualified professionals.
             </p>
             <p>
               Beyond price, comparing providers allows you to assess their experience, read reviews, and find someone whose approach aligns with your expectations. The right provider makes all the difference in achieving natural, beautiful results.
@@ -42,7 +42,7 @@ export default function AboutPage() {
 
             <h2>Verified Provider Network</h2>
             <p>
-              All providers in this network are verified professionals. Dental practitioners are registered with the General Dental Council (GDC), and aesthetic practitioners hold appropriate qualifications and insurance. This verification process ensures you're only connected with legitimate, qualified professionals.
+              All providers in this network are verified professionals. Aesthetic practitioners hold appropriate qualifications including Level 7 injectable qualifications, medical backgrounds, and comprehensive insurance. This verification process ensures you're only connected with legitimate, qualified professionals.
             </p>
             <p>
               The network includes providers across all London boroughs and surrounding areas – over 100 locations in total. Whether you're in Central London or the outer suburbs, there are quality providers available near you.
@@ -50,7 +50,7 @@ export default function AboutPage() {
 
             <h2>Treatments Covered</h2>
             <p>
-              This service covers the most popular cosmetic treatments sought by London residents, including teeth whitening, Invisalign and clear aligners, dental veneers and bonding, Botox and anti-wrinkle treatments, dermal fillers, lip enhancement, dental crowns, and comprehensive smile makeovers.
+              This service covers the most popular aesthetic treatments sought by London residents, including Botox and anti-wrinkle injections, dermal fillers for cheeks, jawline, and lips, tear trough treatments, chemical peels, microneedling, Profhilo, PRP facials, fat dissolving injections, and laser hair removal.
             </p>
             <p>
               Each provider in the network specialises in different treatments, ensuring you're matched with practitioners who have specific expertise in your area of interest.
