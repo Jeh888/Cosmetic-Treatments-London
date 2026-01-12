@@ -17,7 +17,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `Cosmetic Treatments ${location.name} | Compare Local Providers | Free Quotes`,
-    description: `Find verified cosmetic treatment providers in ${location.name}. Compare teeth whitening, Invisalign, Botox, fillers, veneers and more. Get free quotes from local practitioners.`,
+    description: `Find verified aesthetic treatment providers in ${location.name}. Compare Botox, fillers, skin treatments and more. Get free quotes from local practitioners.`,
   };
 }
 
@@ -62,7 +62,7 @@ export default function CityPage({ params }) {
                 Cosmetic Treatments in {location.name}
               </h1>
            <p className="text-xl text-gray-300 mb-8">
-  {locationData?.heroIntro || `Compare verified cosmetic dentists and aesthetic clinics in ${location.name}. Get free quotes within 2 hours.`}
+  {locationData?.heroIntro || `Compare verified aesthetic clinics and practitioners in ${location.name}. Get free quotes within 2 hours.`}
 </p>
               
               {/* Trust Badges */}
@@ -244,7 +244,7 @@ export default function CityPage({ params }) {
             },
             {
               question: `What treatments are available in ${location.name}?`,
-              answer: `Providers in ${location.name} offer teeth whitening, Invisalign, Botox, dermal fillers, veneers, dental bonding, lip fillers, crowns, and smile makeovers.`
+              answer: `Providers in ${location.name} offer Botox, dermal fillers, lip fillers, cheek fillers, jawline contouring, chemical peels, microneedling, Profhilo, and more.`
             },
             {
               question: `How much do cosmetic treatments cost in ${location.name}?`,
