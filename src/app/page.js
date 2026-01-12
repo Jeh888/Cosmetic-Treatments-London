@@ -1,22 +1,39 @@
 import Link from 'next/link';
+import { notFound } from 'next/navigation';
 import LeadForm from '@/components/LeadForm';
-import ServiceCard from '@/components/ServiceCard';
-import ReviewCard from '@/components/ReviewCard';
 import FAQAccordion from '@/components/FAQAccordion';
-import { services } from '@/data/services';
+import { getServiceBySlug, getAllServiceSlugs } from '@/data/services';
 import { getBoroughs } from '@/data/locations';
-import { getFeaturedReviews } from '@/data/reviews';
-import { getGeneralFaqs } from '@/data/faqs';
+import { getFaqsByTreatment } from '@/data/faqs';
 
-export default function HomePage() {
+export async function generateStaticParams() {
+  return getAllServiceSlugs().map((slug) => ({ service: slug }));
+}
+
+export async function generateMetadata({ params }) {
+  const service = getServiceBySlug(params.service);
+  if (!service) return {};
+
+  return {
+    title: `${service.name} London | Compare Providers | Free Quotes`,
+    description: service.description,
+  };
+}
+
+export default function ServicePage({ params }) {
+  const service = getServiceBySlug(params.service);
+  
+  if (!service) {
+    notFound();
+  }
+
   const boroughs = getBoroughs();
-  const featuredReviews = getFeaturedReviews(6);
-  const generalFaqs = getGeneralFaqs().slice(0, 5);
+  const faqs = getFaqsByTreatment(service.slug);
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white overflow-hidden min-h-[600px]">
+      {/* Hero */}
+      <section className="relative bg-gray-900 text-white min-h-[500px]">
         <div 
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974')" }}
@@ -26,51 +43,38 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="inline-block bg-accent-500 text-white text-sm font-semibold px-4 py-1 rounded-full mb-6">
-                Trusted by 10,000+ Londoners
-              </div>
+              <nav className="text-gray-300 text-sm mb-4">
+                <Link href="/" className="hover:text-white">Home</Link>
+                <span className="mx-2">/</span>
+                <Link href="/treatments" className="hover:text-white">Treatments</Link>
+                <span className="mx-2">/</span>
+                <span className="text-white">{service.name}</span>
+              </nav>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                Get the Smile You Deserve
+              <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
+                {service.name} in London
               </h1>
-              
-              <p className="text-xl text-gray-300 mb-8 max-w-lg">
-                Compare London's top cosmetic dentists and aesthetic clinics. Free quotes in 2 hours.
+              <p className="text-xl text-gray-300 mb-8">
+                {service.description}
               </p>
               
-              {/* Trust Badges */}
-              <div className="grid grid-cols-3 gap-4 mb-8">
-                <div className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-white">500+</div>
-                  <div className="text-xs text-gray-300">Verified Clinics</div>
+              {/* Info Badges */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-4">
+                  <div className="text-sm text-gray-400">Price Range</div>
+                  <div className="text-lg font-bold text-white">{service.priceRange}</div>
                 </div>
-                <div className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-white">4.9/5</div>
-                  <div className="text-xs text-gray-300">Patient Rating</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-white">2hr</div>
-                  <div className="text-xs text-gray-300">Avg Response</div>
-                </div>
-              </div>
-
-              {/* Social Proof */}
-              <div className="flex items-center space-x-3">
-                <div className="flex -space-x-2">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
-                  <div className="w-10 h-10 rounded-full bg-primary-500 border-2 border-white flex items-center justify-center text-xs font-bold">+99</div>
-                </div>
-                <div className="text-sm text-gray-300">
-                  <span className="font-semibold text-white">127 people</span> requested quotes today
+                <div className="bg-white/10 backdrop-blur rounded-lg p-4">
+                  <div className="text-sm text-gray-400">Timeline</div>
+                  <div className="text-lg font-bold text-white">{service.timeline}</div>
                 </div>
               </div>
             </div>
 
             <div>
               <LeadForm 
-                title="Get 3 Free Quotes"
+                preselectedService={service.slug}
+                title={`Get ${service.name} Quotes`}
                 subtitle="Top clinics will call you within 2 hours"
               />
             </div>
@@ -78,185 +82,100 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              What Treatment Are You Looking For?
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Select a treatment to compare prices from verified London clinics
-            </p>
-          </div>
+      {/* About Treatment */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            About {service.name}
+          </h2>
+          <p className="text-gray-600 mb-8">
+            {service.longDescription}
+          </p>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {services.map((service) => (
-              <ServiceCard key={service.slug} service={service} />
-            ))}
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Benefits</h3>
+              <ul className="space-y-2">
+                {service.benefits.map((benefit, i) => (
+                  <li key={i} className="flex items-start">
+                    <svg className="w-5 h-5 text-primary-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-600">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">What's Included</h3>
+              <ul className="space-y-2">
+                {service.features.map((feature, i) => (
+                  <li key={i} className="flex items-start">
+                    <svg className="w-5 h-5 text-primary-500 mr-2 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-gray-600">{feature}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-16 md:py-24 bg-white">
+      {/* Locations */}
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Get Quotes in 3 Simple Steps
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                1
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Tell Us What You Need</h3>
-              <p className="text-gray-600">
-                Pick your treatment and location. Takes 30 seconds.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                2
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Get Calls From Top Clinics</h3>
-              <p className="text-gray-600">
-                Up to 3 verified clinics will call you within 2 hours with quotes.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-4">
-                3
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Book Your Consultation</h3>
-              <p className="text-gray-600">
-                Compare prices and reviews. Choose the best fit for you.
-              </p>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <Link
-              href="/free-quote"
-              className="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-accent-600 transition text-lg shadow-lg hover:shadow-xl"
-            >
-              Get My Free Quotes →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Locations */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Find Clinics Near You
-            </h2>
-            <p className="text-xl text-gray-600">
-              100+ locations across London
-            </p>
-          </div>
-
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            {service.name} Across London
+          </h2>
+          <p className="text-gray-600 mb-8">
+            Find {service.name.toLowerCase()} providers in your area
+          </p>
+          
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {boroughs.map((borough) => (
               <Link
                 key={borough.slug}
-                href={`/locations/${borough.slug}`}
+                href={`/locations/${borough.slug}/${service.slug}`}
                 className="bg-white rounded-lg p-4 border border-gray-200 hover:border-primary-300 hover:shadow-md transition group text-center"
               >
-                <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition">
-                  {borough.name}
+                <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition text-sm">
+                  {service.name} in {borough.name}
                 </h3>
               </Link>
             ))}
           </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href="/locations"
-              className="text-primary-600 font-semibold hover:text-primary-700 transition"
-            >
-              View All 100+ Locations →
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* Reviews Section */}
-      <section className="py-16 md:py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Real Results From Real Patients
+      {/* FAQs */}
+      {faqs.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-8">
+              {service.name} FAQs
             </h2>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="flex text-yellow-400 text-xl">★★★★★</div>
-              <span className="text-gray-600">4.9/5 from 2,847 reviews</span>
-            </div>
+            <FAQAccordion faqs={faqs} />
           </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredReviews.map((review) => (
-              <ReviewCard key={review.id} review={review} />
-            ))}
-          </div>
-
-          <div className="text-center mt-8">
-            <Link
-              href="/reviews"
-              className="text-primary-600 font-semibold hover:text-primary-700 transition"
-            >
-              Read More Reviews →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Common Questions
-            </h2>
-          </div>
-
-          <FAQAccordion faqs={generalFaqs} />
-
-          <div className="text-center mt-8">
-            <Link
-              href="/faq"
-              className="text-primary-600 font-semibold hover:text-primary-700 transition"
-            >
-              View All FAQs →
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-gray-900 text-white relative overflow-hidden">
-        <div 
-          className="absolute inset-0 bg-cover bg-center opacity-20"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974')" }}
-        />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
-          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Your Perfect Smile Is One Click Away
+      <section className="py-16 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready for {service.name}?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join 10,000+ Londoners who found their ideal cosmetic treatment provider
+            Get free quotes from London's top providers
           </p>
           <Link
             href="/free-quote"
-            className="inline-block bg-accent-500 text-white px-10 py-5 rounded-lg font-bold hover:bg-accent-600 transition text-xl shadow-lg hover:shadow-xl"
+            className="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-accent-600 transition text-lg shadow-lg"
           >
-            Get My Free Quotes Now →
+            Get Free Quotes →
           </Link>
-          <p className="mt-4 text-gray-400 text-sm">No spam. No obligation. Just quotes from top clinics.</p>
         </div>
       </section>
     </>
