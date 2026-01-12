@@ -4,8 +4,8 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Cosmetic Treatments London | Compare Top Providers | Free Quotes',
-  description: 'Compare cosmetic treatment providers across London. Get free quotes for teeth whitening, Invisalign, Botox, dermal fillers, veneers, and more from verified practitioners.',
-  keywords: 'cosmetic treatments London, teeth whitening London, Invisalign London, Botox London, dermal fillers London, veneers London, cosmetic dentist London',
+  description: 'Compare aesthetic treatment providers across London. Get free quotes for Botox, dermal fillers, lip fillers, chemical peels, and more from verified practitioners.',
+  keywords: 'cosmetic treatments London, Botox London, dermal fillers London, lip fillers London, aesthetics London, anti-wrinkle London, skin treatments London',
 };
 
 export default function RootLayout({ children }) {
