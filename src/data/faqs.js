@@ -291,6 +291,160 @@ export const faqs = {
         question: 'How many treatments are recommended?',
         answer: 'A course of 3 treatments spaced 4-6 weeks apart is typically recommended for optimal results, with maintenance treatments annually.'
       }
+    ],
+    'polynucleotides': [
+      {
+        question: 'What are polynucleotides?',
+        answer: 'Polynucleotides are DNA fragments derived from salmon or trout that stimulate fibroblast activity, promoting tissue repair and regeneration at a cellular level.'
+      },
+      {
+        question: 'How are polynucleotides different from fillers?',
+        answer: 'Unlike fillers that add volume, polynucleotides work at a cellular level to regenerate tissue, improve skin quality, and stimulate your own collagen and elastin production.'
+      },
+      {
+        question: 'How many sessions do I need?',
+        answer: 'Most patients benefit from 2-3 sessions spaced 3-4 weeks apart. Maintenance treatments every 6-12 months help sustain results.'
+      },
+      {
+        question: 'Can polynucleotides treat under-eyes?',
+        answer: 'Yes, polynucleotides are excellent for the delicate under-eye area due to their regenerative and anti-inflammatory properties, improving dark circles and crepey skin.'
+      },
+      {
+        question: 'When will I see results?',
+        answer: 'Results develop gradually over 4-8 weeks as tissue regeneration occurs. Improvements continue for several months after your final treatment.'
+      }
+    ],
+    'skin-boosters': [
+      {
+        question: 'What are skin boosters?',
+        answer: 'Skin boosters are injectable treatments using hyaluronic acid to hydrate skin from within. Unlike fillers, they don\'t add volume but improve overall skin quality and radiance.'
+      },
+      {
+        question: 'How long do skin boosters last?',
+        answer: 'Results typically last 6-9 months. A course of 2-3 initial treatments is recommended, followed by maintenance sessions every 6 months.'
+      },
+      {
+        question: 'Is the treatment painful?',
+        answer: 'Multiple small injections are required, but topical numbing cream makes treatment comfortable. Most patients describe mild discomfort rather than pain.'
+      },
+      {
+        question: 'What\'s the difference between brands?',
+        answer: 'Products like Seventy Hyal, Skinvive, and Profhilo differ in hyaluronic acid concentration and consistency. Your practitioner will recommend the best option for your skin.'
+      },
+      {
+        question: 'Can skin boosters be combined with other treatments?',
+        answer: 'Yes, skin boosters work well alongside Botox, fillers, and skin treatments like peels or microneedling for comprehensive rejuvenation.'
+      }
+    ],
+    'hair-transplant': [
+      {
+        question: 'Is a hair transplant permanent?',
+        answer: 'Yes, transplanted hair is permanent because it comes from areas genetically resistant to balding. The hair grows naturally and lasts a lifetime.'
+      },
+      {
+        question: 'What\'s the difference between FUE and FUT?',
+        answer: 'FUE extracts individual follicles leaving tiny dot scars. FUT removes a strip of scalp leaving a linear scar but can harvest more grafts. Most UK clinics now prefer FUE.'
+      },
+      {
+        question: 'How long is the recovery?',
+        answer: 'Most patients return to work within 3-5 days. Redness and scabbing resolve within 2 weeks. Strenuous exercise should be avoided for 2-3 weeks.'
+      },
+      {
+        question: 'Will it look natural?',
+        answer: 'With skilled surgeons using modern techniques, results are completely natural. Hairlines are designed to suit your face and age appropriately over time.'
+      },
+      {
+        question: 'Am I a good candidate?',
+        answer: 'Good candidates have sufficient donor hair, stable hair loss patterns, and realistic expectations. A consultation will assess your suitability and likely results.'
+      }
+    ],
+    'prp-hair-treatment': [
+      {
+        question: 'How does PRP help hair growth?',
+        answer: 'PRP contains growth factors that stimulate dormant hair follicles, extend the growth phase of hair, and improve blood supply to the scalp.'
+      },
+      {
+        question: 'Who is PRP hair treatment suitable for?',
+        answer: 'PRP works best for early-stage hair loss and thinning where follicles are still functioning. It\'s suitable for both men and women experiencing hair thinning.'
+      },
+      {
+        question: 'How many sessions are needed?',
+        answer: 'A course of 3-4 treatments spaced 4-6 weeks apart is typically recommended, followed by maintenance sessions every 6-12 months.'
+      },
+      {
+        question: 'When will I see results?',
+        answer: 'Reduced hair shedding is often noticed within 4-6 weeks. Visible improvement in density and thickness develops over 3-6 months.'
+      },
+      {
+        question: 'Can PRP be combined with hair transplant?',
+        answer: 'Yes, PRP is often used alongside hair transplants to enhance graft survival and stimulate growth. It\'s also used to strengthen existing hair in non-transplanted areas.'
+      }
+    ],
+    'rf-skin-tightening': [
+      {
+        question: 'How does RF skin tightening work?',
+        answer: 'Radiofrequency energy heats the deeper layers of skin, causing immediate collagen contraction and stimulating long-term collagen production for firmer skin.'
+      },
+      {
+        question: 'Is RF treatment painful?',
+        answer: 'Most patients find RF comfortable, describing it as a warm massage sensation. Treatment settings are adjusted to your comfort level.'
+      },
+      {
+        question: 'How many sessions do I need?',
+        answer: 'A course of 4-6 treatments spaced 1-2 weeks apart is typically recommended for optimal results. Maintenance sessions extend results.'
+      },
+      {
+        question: 'What areas can be treated?',
+        answer: 'RF can treat face, neck, jawline, and body areas including abdomen, arms, and thighs. It\'s effective for mild to moderate skin laxity.'
+      },
+      {
+        question: 'How long do results last?',
+        answer: 'Results can last 1-2 years with proper skincare. Maintenance treatments every 6-12 months help sustain collagen production.'
+      }
+    ],
+    'hydrafacial': [
+      {
+        question: 'What does a HydraFacial include?',
+        answer: 'HydraFacial includes cleansing, exfoliation, gentle acid peel, painless extractions, and hydrating serum infusion - all in one 30-45 minute treatment.'
+      },
+      {
+        question: 'Is there any downtime?',
+        answer: 'No downtime at all - you can apply makeup and return to normal activities immediately. It\'s the perfect "lunchtime facial".'
+      },
+      {
+        question: 'How often should I have a HydraFacial?',
+        answer: 'Monthly treatments are ideal for maintaining results. Many people have HydraFacials before special events for instant glow.'
+      },
+      {
+        question: 'Is HydraFacial suitable for sensitive skin?',
+        answer: 'Yes, HydraFacial is gentle and suitable for most skin types including sensitive skin. Treatment can be customised to your skin\'s needs.'
+      },
+      {
+        question: 'What results can I expect?',
+        answer: 'Immediately clearer, more radiant skin with reduced congestion. Regular treatments improve texture, tone, and overall skin health over time.'
+      }
+    ],
+    'led-light-therapy': [
+      {
+        question: 'How does LED light therapy work?',
+        answer: 'Different wavelengths of light penetrate the skin to trigger cellular responses - red light stimulates collagen, blue light kills acne bacteria, near-infrared promotes healing.'
+      },
+      {
+        question: 'Is LED therapy painful?',
+        answer: 'Not at all - LED therapy is completely painless. You simply relax under the light panel for 20-30 minutes. Many patients find it relaxing.'
+      },
+      {
+        question: 'How many sessions do I need?',
+        answer: 'Results are cumulative, so a course of 6-12 sessions is typically recommended. Many clinics offer LED as an add-on to other facial treatments.'
+      },
+      {
+        question: 'What can LED treat?',
+        answer: 'LED is effective for anti-ageing, acne, rosacea, inflammation, wound healing, and enhancing results from other treatments like peels or microneedling.'
+      },
+      {
+        question: 'Are there any side effects?',
+        answer: 'LED therapy has virtually no side effects. It\'s non-invasive with no downtime. Those with light sensitivity or taking photosensitising medications should consult their practitioner.'
+      }
     ]
   }
 };

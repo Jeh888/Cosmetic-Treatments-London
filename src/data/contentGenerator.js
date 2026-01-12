@@ -1,6 +1,24 @@
 
 const locationContent = {
 
+  'london': {
+    heroIntro: `London is the UK's aesthetic treatment capital, home to world-renowned Harley Street clinics and thousands of qualified practitioners across every borough. From cutting-edge injectables to advanced skin treatments, London offers unmatched choice and expertise.`,
+    subHeadline: `Compare verified aesthetic providers across London`,
+    paragraph1: `With nearly 9 million residents and countless visitors, London's aesthetic industry is the largest in the UK. Whether you're in Central London seeking Harley Street expertise, or looking for quality local clinics in your borough, the choice can be overwhelming. Prices vary enormously - the same treatment can cost three times more in Mayfair than in outer London, often with no difference in quality or results.`,
+    paragraph2: `We connect you with verified aesthetic practitioners across all London boroughs. Compare quotes, check qualifications, and find providers who match your needs and budget - from premium Harley Street consultants to excellent local clinics. All practitioners in our network are fully qualified and insured.`,
+    facts: [
+      `London has over 3,000 aesthetic clinics - more than any other European city`,
+      `Harley Street alone has 100+ aesthetic practitioners specialising in injectables and skin treatments`,
+      `Londoners spend an estimated £500 million annually on non-surgical cosmetic treatments`
+    ],
+    glance: {
+      population: '8,800,000',
+      borough: 'Greater London',
+      keyDemographics: 'Professionals, Diverse communities, All age groups',
+      mainAreas: 'Central, North, South, East, West London'
+    }
+  },
+
   'croydon': {
     heroIntro: `Croydon has transformed from South London commuter hub into a genuine metropolitan centre. The fifteen-minute connection to London Bridge brings young professionals who expect the same cosmetic treatment standards they'd find in Zone 1 - but at South London prices.`,
     subHeadline: `Reach 390,000 potential customers in Croydon`,

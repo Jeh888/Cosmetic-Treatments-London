@@ -360,6 +360,216 @@ export const services = [
     resultsTimeline: 'develop over 4-6 weeks with continued improvement',
     icon: 'heart',
     category: 'skin'
+  },
+  {
+    slug: 'polynucleotides',
+    name: 'Polynucleotides',
+    shortDescription: 'Bio-stimulating injections to regenerate and rejuvenate ageing skin',
+    description: 'Discover polynucleotide treatments for deep skin regeneration. Compare practitioners offering this innovative bio-stimulator for improved skin quality, elasticity, and hydration.',
+    longDescription: 'Polynucleotides are the latest advancement in regenerative aesthetics, using DNA fragments derived from salmon or trout to stimulate fibroblast activity and promote tissue repair. Unlike fillers that add volume, polynucleotides work at a cellular level to improve skin quality from within. They boost collagen and elastin production, improve hydration, and have anti-inflammatory properties that help with scarring and redness. Results develop gradually over several weeks as the skin regenerates, with improvements in texture, tone, firmness, and overall radiance. Treatment is suitable for face, neck, under-eyes, and hands.',
+    benefits: [
+      'Stimulates natural tissue regeneration',
+      'Improves skin elasticity and firmness',
+      'Deep, long-lasting hydration',
+      'Reduces fine lines and wrinkles',
+      'Anti-inflammatory properties',
+      'Improves acne scarring',
+      'Suitable for delicate under-eye area',
+      'Results last 6-12 months'
+    ],
+    features: [
+      'Skin assessment and consultation',
+      'Premium polynucleotide products (Nucleofill, Plinest)',
+      'Precise injection technique',
+      'Multiple treatment areas available',
+      '2-3 session protocol recommended',
+      'Review and maintenance planning'
+    ],
+    priceRange: '£250 - £450 per session',
+    timeline: 'Results over 4-8 weeks',
+    resultsTimeline: 'develop over 4-8 weeks with continued improvement',
+    icon: 'zap',
+    category: 'skin'
+  },
+  {
+    slug: 'skin-boosters',
+    name: 'Skin Boosters',
+    shortDescription: 'Injectable hydration treatments for glowing, dewy skin',
+    description: 'Achieve radiant, hydrated skin with professional skin booster treatments. Compare clinics offering Seventy Hyal, Skinvive, Juvederm Volite, and other leading skin boosters.',
+    longDescription: 'Skin boosters are micro-injections of hyaluronic acid designed to hydrate the skin from within, rather than add volume like traditional fillers. They work by attracting and retaining moisture in the deeper layers of skin, improving overall skin quality, texture, and radiance. Popular products include Seventy Hyal 2000, Skinvive, Juvederm Volite, and Restylane Skinboosters. Treatment involves multiple small injections across the face, neck, or hands, with results building over 2-3 sessions. The effect is subtle but transformative - skin looks healthier, more hydrated, and naturally glowing.',
+    benefits: [
+      'Intense deep hydration',
+      'Improves skin texture and smoothness',
+      'Creates natural radiant glow',
+      'Reduces fine lines',
+      'Improves skin elasticity',
+      'Suitable for all skin types',
+      'Natural, subtle results',
+      'Results last 6-9 months'
+    ],
+    features: [
+      'Skin analysis and consultation',
+      'Choice of premium skin boosters',
+      'Multiple micro-injection technique',
+      'Topical anaesthesia for comfort',
+      '2-3 session treatment course',
+      'Maintenance treatment planning'
+    ],
+    priceRange: '£200 - £400 per session',
+    timeline: 'Results over 2-4 weeks',
+    resultsTimeline: 'develop over 2-4 weeks with optimal results after full course',
+    icon: 'droplet',
+    category: 'skin'
+  },
+  {
+    slug: 'hair-transplant',
+    name: 'Hair Transplant',
+    shortDescription: 'Permanent hair restoration using your own natural hair follicles',
+    description: 'Restore your hair permanently with advanced transplant techniques. Compare leading UK clinics offering FUE and FUT procedures for natural-looking, lasting results.',
+    longDescription: 'Hair transplant surgery offers a permanent solution to hair loss by relocating healthy hair follicles from donor areas (typically the back and sides of the head) to thinning or balding areas. Modern FUE (Follicular Unit Extraction) technique extracts individual follicles, leaving no linear scar and allowing for faster recovery. Results are completely natural because it\'s your own hair growing in its new location. The transplanted hair falls out initially but regrows permanently within 3-4 months. Full results are visible at 12-18 months, with hair that can be cut, styled, and treated normally.',
+    benefits: [
+      'Permanent, natural results',
+      'Uses your own hair - no rejection risk',
+      'No visible scarring with FUE technique',
+      'One-time procedure for lasting results',
+      'Hair grows naturally and can be styled',
+      'Restores hairline and density',
+      'Boosts confidence significantly',
+      'Results continue improving for 18 months'
+    ],
+    features: [
+      'Comprehensive consultation and assessment',
+      'Hairline design and planning',
+      'FUE or FUT technique as appropriate',
+      'Local anaesthesia for comfort',
+      'Detailed aftercare instructions',
+      'Follow-up appointments included'
+    ],
+    priceRange: '£3,000 - £10,000',
+    timeline: 'Full results in 12-18 months',
+    resultsTimeline: 'begin at 3-4 months with full results at 12-18 months',
+    icon: 'user',
+    category: 'hair'
+  },
+  {
+    slug: 'prp-hair-treatment',
+    name: 'PRP Hair Treatment',
+    shortDescription: 'Stimulate natural hair growth using your own platelet-rich plasma',
+    description: 'Combat hair thinning with PRP hair restoration treatments. Find clinics offering this natural approach to stimulating hair growth and improving hair density.',
+    longDescription: 'PRP (Platelet-Rich Plasma) hair treatment uses concentrated growth factors from your own blood to stimulate dormant hair follicles and promote natural hair growth. A small blood sample is processed to concentrate the platelets, which are then injected into the scalp in areas of thinning. The growth factors stimulate the follicles, extend the hair growth phase, and improve blood supply to the scalp. PRP is effective for early-stage hair loss and thinning, working best for those who still have functioning follicles. Results include reduced hair fall, increased hair density, and improved hair thickness.',
+    benefits: [
+      'Uses your own blood - completely natural',
+      'No risk of allergic reaction',
+      'Stimulates dormant hair follicles',
+      'Reduces hair shedding',
+      'Increases hair density and thickness',
+      'Non-surgical with no downtime',
+      'Can combine with other hair treatments',
+      'Suitable for men and women'
+    ],
+    features: [
+      'Scalp assessment and consultation',
+      'Blood draw and PRP preparation',
+      'Medical-grade centrifuge processing',
+      'Targeted scalp injections',
+      'Course of 3-4 treatments recommended',
+      'Maintenance treatment planning'
+    ],
+    priceRange: '£300 - £600 per session',
+    timeline: 'Results over 3-6 months',
+    resultsTimeline: 'develop over 3-6 months with continued improvement',
+    icon: 'zap',
+    category: 'hair'
+  },
+  {
+    slug: 'rf-skin-tightening',
+    name: 'RF Skin Tightening',
+    shortDescription: 'Non-surgical skin firming using radiofrequency energy',
+    description: 'Tighten and firm sagging skin without surgery using radiofrequency treatments. Compare clinics offering RF skin tightening for face, neck, and body.',
+    longDescription: 'Radiofrequency (RF) skin tightening uses controlled heat energy to stimulate collagen production and tighten loose or sagging skin. The RF energy heats the deeper layers of skin, causing immediate collagen contraction and triggering long-term collagen remodelling. Treatment is comfortable, often described as a warm massage, with no downtime. Results are gradual, improving over 2-6 months as new collagen forms. RF is effective for mild to moderate skin laxity on the face, neck, jawline, and body areas like the abdomen and arms. It\'s an excellent option for those not ready for surgical intervention.',
+    benefits: [
+      'Non-surgical skin tightening',
+      'Stimulates natural collagen production',
+      'No downtime - return to activities immediately',
+      'Comfortable, pain-free treatment',
+      'Gradual, natural-looking results',
+      'Treats face, neck, and body',
+      'Safe for all skin types',
+      'Results last 1-2 years'
+    ],
+    features: [
+      'Skin laxity assessment',
+      'Medical-grade RF technology',
+      'Customised treatment settings',
+      'Comfortable warming sensation',
+      'Course of treatments recommended',
+      'Maintenance treatment options'
+    ],
+    priceRange: '£200 - £500 per session',
+    timeline: 'Results over 2-6 months',
+    resultsTimeline: 'develop over 2-6 months as collagen rebuilds',
+    icon: 'zap',
+    category: 'skin'
+  },
+  {
+    slug: 'hydrafacial',
+    name: 'HydraFacial',
+    shortDescription: 'Multi-step facial treatment for instant glow and deep cleansing',
+    description: 'Experience the UK\'s favourite medical facial. Compare clinics offering HydraFacial treatments for deep cleansing, exfoliation, and instant radiance.',
+    longDescription: 'HydraFacial is a medical-grade facial treatment that cleanses, exfoliates, extracts, and hydrates the skin using patented Vortex-Fusion technology. The multi-step treatment removes dead skin cells and impurities while simultaneously delivering moisturising serums. Unlike traditional facials, HydraFacial provides instant visible results with no discomfort or downtime - making it the perfect "lunchtime facial". The treatment can be customised with boosters targeting specific concerns like fine lines, pigmentation, or congestion. Results include immediately clearer, more radiant skin with improved texture and tone.',
+    benefits: [
+      'Instant visible results',
+      'Deep cleansing and extraction',
+      'No downtime or discomfort',
+      'Suitable for all skin types',
+      'Customisable to skin concerns',
+      'Improves texture and radiance',
+      'Reduces congestion and blackheads',
+      'Perfect pre-event treatment'
+    ],
+    features: [
+      'Skin analysis consultation',
+      'Cleanse and exfoliation',
+      'Gentle acid peel',
+      'Painless extractions',
+      'Hydrating serum infusion',
+      'Optional targeted boosters'
+    ],
+    priceRange: '£120 - £250 per treatment',
+    timeline: 'Immediate results',
+    resultsTimeline: 'be visible immediately with optimal results from regular treatments',
+    icon: 'droplet',
+    category: 'skin'
+  },
+  {
+    slug: 'led-light-therapy',
+    name: 'LED Light Therapy',
+    shortDescription: 'Non-invasive light treatment for skin rejuvenation and healing',
+    description: 'Improve your skin with professional LED light therapy. Compare clinics offering red light, blue light, and combination treatments for anti-ageing, acne, and skin health.',
+    longDescription: 'LED (Light Emitting Diode) therapy uses specific wavelengths of light to trigger natural cellular processes in the skin. Red light (630-700nm) stimulates collagen production and reduces inflammation, making it excellent for anti-ageing and healing. Blue light (400-470nm) kills acne-causing bacteria, helping clear breakouts. Near-infrared light penetrates deepest, promoting cellular repair and reducing inflammation. Treatment is completely painless and relaxing - you simply lie under the LED panel for 20-30 minutes. There\'s no downtime, and LED can enhance results from other treatments.',
+    benefits: [
+      'Completely non-invasive and painless',
+      'No downtime whatsoever',
+      'Stimulates collagen production',
+      'Reduces inflammation and redness',
+      'Kills acne-causing bacteria',
+      'Promotes wound healing',
+      'Enhances other treatment results',
+      'Relaxing, spa-like experience'
+    ],
+    features: [
+      'Skin assessment and light selection',
+      'Medical-grade LED panels',
+      'Red, blue, or combination therapy',
+      'Comfortable 20-30 minute sessions',
+      'Course packages available',
+      'Can combine with other facials'
+    ],
+    priceRange: '£50 - £150 per session',
+    timeline: 'Cumulative results over weeks',
+    resultsTimeline: 'build cumulatively over multiple sessions',
+    icon: 'sun',
+    category: 'skin'
   }
 ];
 

@@ -11,6 +11,7 @@ export default function TreatmentsPage() {
   const injectables = services.filter(s => s.category === 'injectables');
   const skinTreatments = services.filter(s => s.category === 'skin');
   const bodyTreatments = services.filter(s => s.category === 'body');
+  const hairTreatments = services.filter(s => s.category === 'hair');
 
   return (
     <>
@@ -105,6 +106,37 @@ export default function TreatmentsPage() {
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {bodyTreatments.map((service) => (
+                <Link
+                  key={service.slug}
+                  href={`/${service.slug}`}
+                  className="group bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-200 transition"
+                >
+                  <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition mb-2">
+                    {service.name}
+                  </h3>
+                  <p className="text-sm text-gray-600 mb-4">
+                    {service.shortDescription}
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <span className="text-primary-600 font-medium text-sm">{service.priceRange}</span>
+                    <span className="text-sm text-gray-500">{service.timeline}</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Hair Treatments */}
+      {hairTreatments.length > 0 && (
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Hair Restoration</h2>
+            <p className="text-gray-600 mb-8">Surgical and non-surgical solutions for hair loss and thinning.</p>
+            
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {hairTreatments.map((service) => (
                 <Link
                   key={service.slug}
                   href={`/${service.slug}`}

@@ -1,6 +1,20 @@
 // locations.js - London boroughs and areas
 
 export const locations = [
+  // LONDON (MAIN)
+  {
+    name: 'London',
+    slug: 'london',
+    borough: 'Greater London',
+    region: 'London',
+    population: '8,799,800',
+    description: 'London is the capital of the United Kingdom and one of the world\'s leading cities for aesthetic treatments, with thousands of clinics and practitioners across all boroughs.',
+    businessContext: 'As a global hub for aesthetics and cosmetic treatments, London offers unparalleled choice of providers from Harley Street specialists to neighbourhood clinics.',
+    industries: ['Finance', 'Technology', 'Healthcare', 'Creative Industries', 'Professional Services'],
+    nearbyAreas: ['Central London', 'Westminster', 'Kensington', 'Camden', 'Islington'],
+    landmarks: ['Harley Street', 'Oxford Street', 'Tower Bridge', 'Buckingham Palace'],
+    isBorough: true
+  },
   // CROYDON BOROUGH
   {
     name: 'Croydon',

@@ -5,7 +5,7 @@ import { services } from '@/data/services';
 
 export const metadata = {
   title: 'FAQ | Cosmetic Treatments London | Questions Answered',
-  description: 'Frequently asked questions about cosmetic treatments and finding providers in London. Learn about teeth whitening, Invisalign, Botox, fillers, and more.',
+  description: 'Frequently asked questions about aesthetic treatments and finding providers in London. Learn about Botox, fillers, skin treatments, and more.',
 };
 
 export default function FAQPage() {
