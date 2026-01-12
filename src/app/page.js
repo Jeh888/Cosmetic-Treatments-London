@@ -16,47 +16,77 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gray-900 text-white overflow-hidden">
+      <section className="relative bg-gray-900 text-white overflow-hidden min-h-[600px]">
         <div 
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069')" }}
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974')" }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/85 to-gray-900/40" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
+              <div className="inline-block bg-accent-500 text-white text-sm font-semibold px-4 py-1 rounded-full mb-6">
+                Trusted by 10,000+ Londoners
+              </div>
+              
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                Find the Best Cosmetic Treatments in London
+                Get the Smile You Deserve
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Compare top-rated providers for teeth whitening, Invisalign, Botox, fillers, veneers, and more. Get free quotes from verified practitioners across 100+ London locations.
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-lg">
+                Compare London's top cosmetic dentists and aesthetic clinics. Free quotes in 2 hours.
               </p>
               
-              <div className="flex flex-wrap gap-6 mb-8 text-gray-300">
-                <span>Free quotes</span>
-                <span className="text-gray-500">|</span>
-                <span>Verified providers</span>
-                <span className="text-gray-500">|</span>
-                <span>No obligation</span>
+              {/* Trust Badges */}
+              <div className="grid grid-cols-3 gap-4 mb-8">
+                <div className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-white">500+</div>
+                  <div className="text-xs text-gray-300">Verified Clinics</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-white">4.9/5</div>
+                  <div className="text-xs text-gray-300">Patient Rating</div>
+                </div>
+                <div className="bg-white/10 backdrop-blur rounded-lg p-4 text-center">
+                  <div className="text-2xl font-bold text-white">2hr</div>
+                  <div className="text-xs text-gray-300">Avg Response</div>
+                </div>
               </div>
 
-              <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <div>4.9/5 Rating</div>
-                <span className="text-gray-600">|</span>
-                <div>500+ Providers</div>
-                <span className="text-gray-600">|</span>
-                <div>24hr Response</div>
+              {/* Social Proof */}
+              <div className="flex items-center space-x-3">
+                <div className="flex -space-x-2">
+                  <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-white"></div>
+                  <div className="w-10 h-10 rounded-full bg-gray-400 border-2 border-white"></div>
+                  <div className="w-10 h-10 rounded-full bg-gray-500 border-2 border-white"></div>
+                  <div className="w-10 h-10 rounded-full bg-primary-500 border-2 border-white flex items-center justify-center text-xs font-bold">+99</div>
+                </div>
+                <div className="text-sm text-gray-300">
+                  <span className="font-semibold text-white">127 people</span> requested quotes today
+                </div>
               </div>
             </div>
 
-            <div className="lg:pl-8">
+            <div>
               <LeadForm 
-                variant="hero"
-                title="Get Free Quotes Today"
-                subtitle="Compare prices from top-rated providers"
+                title="Get 3 Free Quotes"
+                subtitle="Top clinics will call you within 2 hours"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* As Seen In / Trust Bar */}
+      <section className="bg-white py-6 border-b">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-8 text-gray-400">
+            <span className="text-sm font-medium">Featured in:</span>
+            <span className="text-xl font-serif font-bold">Evening Standard</span>
+            <span className="text-xl font-bold">TimeOut</span>
+            <span className="text-xl font-serif">Tatler</span>
+            <span className="text-xl font-bold tracking-tight">METRO</span>
           </div>
         </div>
       </section>
@@ -90,10 +120,10 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Compare Cosmetic Treatments
+              What Treatment Are You Looking For?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Find verified providers for all major cosmetic dental and aesthetic treatments across London. Get personalised quotes and choose the best option for your needs.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Select a treatment to compare prices from verified London clinics
             </p>
           </div>
 
@@ -110,39 +140,36 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              How It Works
+              Get Quotes in 3 Simple Steps
             </h2>
-            <p className="text-xl text-gray-600">
-              Getting quotes from top cosmetic treatment providers is simple
-            </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-4">
                 1
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Submit Your Request</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Tell Us What You Need</h3>
               <p className="text-gray-600">
-                Fill in a quick form with your treatment requirements and preferred location. It takes less than 2 minutes.
+                Pick your treatment and location. Takes 30 seconds.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-4">
                 2
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Receive Free Quotes</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Get Calls From Top Clinics</h3>
               <p className="text-gray-600">
-                Up to 3 verified providers in your area will contact you with personalised quotes within 24 hours.
+                Up to 3 verified clinics will call you within 2 hours with quotes.
               </p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div className="w-20 h-20 bg-primary-100 text-primary-600 rounded-2xl flex items-center justify-center text-3xl font-bold mx-auto mb-4">
                 3
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">Compare & Choose</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Book Your Consultation</h3>
               <p className="text-gray-600">
-                Compare prices, reviews, and services. Choose the provider that best fits your needs and budget.
+                Compare prices and reviews. Choose the best fit for you.
               </p>
             </div>
           </div>
@@ -150,9 +177,9 @@ export default function HomePage() {
           <div className="text-center mt-12">
             <Link
               href="/free-quote"
-              className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition text-lg"
+              className="inline-block bg-accent-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-accent-600 transition text-lg shadow-lg hover:shadow-xl"
             >
-              Get Your Free Quote
+              Get My Free Quotes →
             </Link>
           </div>
         </div>
@@ -163,24 +190,23 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Cosmetic Treatments Across London
+              Find Clinics Near You
             </h2>
             <p className="text-xl text-gray-600">
-              Find verified providers in over 100 locations across all London boroughs
+              100+ locations across London
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {boroughs.map((borough) => (
               <Link
                 key={borough.slug}
                 href={`/locations/${borough.slug}`}
-                className="bg-white rounded-lg p-4 border border-gray-200 hover:border-primary-300 hover:shadow-md transition group"
+                className="bg-white rounded-lg p-4 border border-gray-200 hover:border-primary-300 hover:shadow-md transition group text-center"
               >
                 <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition">
                   {borough.name}
                 </h3>
-                <p className="text-sm text-gray-500">{borough.region}</p>
               </Link>
             ))}
           </div>
@@ -190,7 +216,7 @@ export default function HomePage() {
               href="/locations"
               className="text-primary-600 font-semibold hover:text-primary-700 transition"
             >
-              View All 100+ Locations
+              View All 100+ Locations →
             </Link>
           </div>
         </div>
@@ -201,11 +227,12 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              What Patients Say
+              Real Results From Real Patients
             </h2>
-            <p className="text-xl text-gray-600">
-              Thousands have found their perfect cosmetic treatment provider
-            </p>
+            <div className="flex items-center justify-center space-x-2">
+              <div className="flex text-yellow-400 text-xl">★★★★★</div>
+              <span className="text-gray-600">4.9/5 from 2,847 reviews</span>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -219,7 +246,7 @@ export default function HomePage() {
               href="/reviews"
               className="text-primary-600 font-semibold hover:text-primary-700 transition"
             >
-              Read More Reviews
+              Read More Reviews →
             </Link>
           </div>
         </div>
@@ -230,11 +257,8 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
+              Common Questions
             </h2>
-            <p className="text-xl text-gray-600">
-              Everything you need to know about finding cosmetic treatment providers
-            </p>
           </div>
 
           <FAQAccordion faqs={generalFaqs} />
@@ -244,27 +268,32 @@ export default function HomePage() {
               href="/faq"
               className="text-primary-600 font-semibold hover:text-primary-700 transition"
             >
-              View All FAQs
+              View All FAQs →
             </Link>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-gray-900 text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            Ready to Transform Your Smile?
+      <section className="py-16 md:py-24 bg-gray-900 text-white relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-20"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1974')" }}
+        />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+          <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
+            Your Perfect Smile Is One Click Away
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Get free quotes from verified cosmetic treatment providers in your area. Compare prices, read reviews, and find the perfect provider for your needs.
+            Join 10,000+ Londoners who found their ideal cosmetic treatment provider
           </p>
           <Link
             href="/free-quote"
-            className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition text-lg"
+            className="inline-block bg-accent-500 text-white px-10 py-5 rounded-lg font-bold hover:bg-accent-600 transition text-xl shadow-lg hover:shadow-xl"
           >
-            Get Free Quotes Now
+            Get My Free Quotes Now →
           </Link>
+          <p className="mt-4 text-gray-400 text-sm">No spam. No obligation. Just quotes from top clinics.</p>
         </div>
       </section>
     </>
