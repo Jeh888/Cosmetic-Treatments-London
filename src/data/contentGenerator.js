@@ -2136,4 +2136,33 @@ export function getAllLocationSlugs() {
   return Object.keys(locationContent);
 }
 
+// Generator functions for service pages
+export function generatePageContent(location, service) {
+  const content = locationContent[location.slug];
+  if (content) {
+    return `${content.paragraph1} When it comes to ${service.name.toLowerCase()}, ${location.name} residents have access to quality providers who understand local needs. ${content.paragraph2}`;
+  }
+  return `${location.name} in ${location.borough} offers excellent options for ${service.name.toLowerCase()} treatment. ${location.description} Local providers understand the specific needs of ${location.region} residents and offer competitive pricing with quality results. Whether you're looking for a subtle enhancement or a complete transformation, comparing multiple ${service.name.toLowerCase()} providers in ${location.name} ensures you find the right practitioner for your goals and budget.`;
+}
+
+export function generateTreatmentContext(location, service) {
+  const content = locationContent[location.slug];
+  const demographicContext = content?.glance?.keyDemographics || location.demographics || 'local residents';
+  return `${service.name} has become increasingly popular among ${demographicContext.toLowerCase()} in ${location.name}. ${location.businessContext || ''} The treatment typically ${service.timeline ? `takes ${service.timeline.toLowerCase()}` : 'varies in duration'} and results can ${service.resultsTimeline || 'be seen within a few weeks'}. Providers in ${location.borough} are experienced in delivering ${service.name.toLowerCase()} to clients with varying needs and expectations.`;
+}
+
+export function generateWhyLocalContent(location, service) {
+  const content = locationContent[location.slug];
+  if (content) {
+    return `${content.heroIntro} For ${service.name.toLowerCase()} specifically, local expertise matters. Practitioners familiar with ${location.name} understand the expectations and lifestyle of residents here.`;
+  }
+  return `Choosing a ${service.name.toLowerCase()} provider in ${location.name} offers several advantages. Local practitioners understand the needs of ${location.borough} residents and can provide convenient appointment times. ${location.description} With ${location.population} residents in the area, local providers have extensive experience serving the community and maintaining their reputation through quality results.`;
+}
+
+export function generateMetaDescription(location, service) {
+  const content = locationContent[location.slug];
+  const intro = content?.heroIntro?.substring(0, 80) || location.description?.substring(0, 80) || '';
+  return `Compare ${service.name.toLowerCase()} providers in ${location.name}, ${location.borough}. ${intro}... Get free quotes from verified local practitioners. ${service.priceRange}.`;
+}
+
 export default locationContent;
