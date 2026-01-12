@@ -18,8 +18,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="text-2xl">✨</span>
+          <Link href="/" className="flex items-center">
             <span className="font-display text-xl font-bold text-gray-900">
               CosmeticTreatments<span className="text-primary-600">.london</span>
             </span>
@@ -56,6 +55,14 @@ export default function Header() {
                         {service.name}
                       </Link>
                     ))}
+                    <div className="border-t border-gray-100 mt-2 pt-2">
+                      <Link
+                        href="/treatments"
+                        className="block px-4 py-2 text-primary-600 font-semibold hover:bg-primary-50 transition"
+                      >
+                        View All Treatments →
+                      </Link>
+                    </div>
                   </div>
                 </div>
               )}
@@ -151,6 +158,9 @@ export default function Header() {
                     {service.name}
                   </Link>
                 ))}
+                <Link href="/treatments" className="block py-1 text-primary-600 text-sm font-semibold">
+                  View All Treatments →
+                </Link>
               </div>
             </div>
 
