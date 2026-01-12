@@ -31,11 +31,11 @@ export default function HomePage() {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                Get the Smile You Deserve
+                Look Your Best, Feel Your Best
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-lg">
-                Compare London's top cosmetic dentists and aesthetic clinics. Free quotes in 2 hours.
+                Compare London's top aesthetic clinics and practitioners. Free quotes in 2 hours.
               </p>
               
               {/* Trust Badges */}
@@ -245,7 +245,7 @@ export default function HomePage() {
         />
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
           <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">
-            Your Perfect Smile Is One Click Away
+            Your Best Look Is One Click Away
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join 10,000+ Londoners who found their ideal cosmetic treatment provider
