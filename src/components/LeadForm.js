@@ -9,7 +9,7 @@ export default function LeadForm({
   preselectedLocation = '',
   variant = 'default',
   title = 'Get Your Free Quote',
-  subtitle = 'Compare prices from top-rated providers in your area'
+  subtitle = 'Compare prices from top-rated providers'
 }) {
   const [formData, setFormData] = useState({
     name: '',
@@ -64,7 +64,11 @@ export default function LeadForm({
   if (submitted) {
     return (
       <div className={`${bgClass} rounded-2xl p-8 text-center`}>
-        <div className="text-5xl mb-4">✅</div>
+        <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          </svg>
+        </div>
         <h3 className={`text-2xl font-bold ${textClass} mb-2`}>Thank You!</h3>
         <p className={subtextClass}>
           Your quote request has been submitted. Top-rated providers in your area will contact you shortly with personalised quotes.
@@ -172,7 +176,7 @@ export default function LeadForm({
         </button>
 
         <p className={`text-xs ${subtextClass} text-center`}>
-          ✓ Free quotes • ✓ No obligation • ✓ Verified providers
+          Free quotes | No obligation | Verified providers
         </p>
       </form>
     </div>
