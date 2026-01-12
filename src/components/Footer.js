@@ -25,17 +25,19 @@ export default function Footer() {
             {/* Physical Address */}
             <div className="text-sm text-gray-400">
               <p className="font-semibold text-white mb-2">Our Office</p>
-              <p>Cosmetic Treatment</p>
-              <p>Devonshire House</p>
-              <p>582 Honeypot Lane</p>
-              <p>Stanmore</p>
-              <p>HA7 4WU</p>
+              <address className="not-italic">
+                <p>Cosmetic Treatment</p>
+                <p>Devonshire House</p>
+                <p>582 Honeypot Lane</p>
+                <p>Stanmore</p>
+                <p>HA7 4WU</p>
+              </address>
             </div>
           </div>
 
           {/* Treatments */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Treatments</h3>
+            <h3 className="font-semibold text-white mb-4">Popular Treatments</h3>
             <ul className="space-y-2">
               {featuredServices.map((service) => (
                 <li key={service.slug}>
@@ -52,7 +54,7 @@ export default function Footer() {
                   href="/treatments"
                   className="text-primary-400 hover:text-primary-300 transition text-sm font-semibold"
                 >
-                  View All →
+                  View All Treatments →
                 </Link>
               </li>
             </ul>
@@ -60,7 +62,7 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Locations</h3>
+            <h3 className="font-semibold text-white mb-4">London Boroughs</h3>
             <ul className="space-y-2">
               {featuredBoroughs.map((borough) => (
                 <li key={borough.slug}>
@@ -77,7 +79,7 @@ export default function Footer() {
                   href="/locations"
                   className="text-primary-400 hover:text-primary-300 transition text-sm font-semibold"
                 >
-                  View All →
+                  View All 100+ Locations →
                 </Link>
               </li>
             </ul>
