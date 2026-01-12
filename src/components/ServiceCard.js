@@ -7,20 +7,17 @@ export default function ServiceCard({ service, location = null }) {
     : `/${service.slug}`;
 
   return (
+   // ServiceCard.js
+import Link from 'next/link';
+
+export default function ServiceCard({ service, location = null }) {
+  const href = location 
+    ? `/locations/${location}/${service.slug}`
+    : `/${service.slug}`;
+
+  return (
     <Link href={href} className="group">
       <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-lg hover:border-primary-200 transition h-full">
-        <div className="text-3xl mb-3">
-          {service.icon === 'sparkles' && '✨'}
-          {service.icon === 'smile' && '😊'}
-          {service.icon === 'syringe' && '💉'}
-          {service.icon === 'droplet' && '💧'}
-          {service.icon === 'star' && '⭐'}
-          {service.icon === 'puzzle' && '🧩'}
-          {service.icon === 'heart' && '❤️'}
-          {service.icon === 'crown' && '👑'}
-          {service.icon === 'calculator' && '🧮'}
-          {service.icon === 'megaphone' && '📣'}
-        </div>
         <h3 className="font-semibold text-gray-900 group-hover:text-primary-600 transition mb-2">
           {service.name}
         </h3>
@@ -34,4 +31,5 @@ export default function ServiceCard({ service, location = null }) {
       </div>
     </Link>
   );
+}
 }
