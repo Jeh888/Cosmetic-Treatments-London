@@ -153,7 +153,7 @@ export default function LeadForm({
           disabled={submitting}
           className="w-full bg-accent-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-accent-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
         >
-          {submitting ? 'Submitting...' : 'Get My Free Quotes →'}
+          {submitting ? 'Submitting...' : 'Get 3 Free Quotes →'}
         </button>
 
         <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
