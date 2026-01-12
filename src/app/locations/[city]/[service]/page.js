@@ -5,6 +5,13 @@ import FAQAccordion from '@/components/FAQAccordion';
 import { getAllLocations, getLocationBySlug, getAllLocationSlugs } from '@/data/locations';
 import { services, getServiceBySlug, getAllServiceSlugs } from '@/data/services';
 import { getFaqsByTreatment } from '@/data/faqs';
+import { 
+  generateLocalIntro, 
+  generateTreatmentLocalContent, 
+  generateWhyChooseLocal,
+  generateAreaHighlights,
+  generateMetaDescription 
+} from '@/data/contentGenerator';
 
 export async function generateStaticParams() {
   const locationSlugs = getAllLocationSlugs();
@@ -26,9 +33,11 @@ export async function generateMetadata({ params }) {
   
   if (!location || !service) return {};
 
+  const description = generateMetaDescription(location, service);
+
   return {
-    title: `${service.name} ${location.name} | Compare Local Providers | Free Quotes`,
-    description: `Find ${service.name.toLowerCase()} providers in ${location.name}. Compare prices from verified practitioners. ${service.shortDescription} Get free quotes today.`,
+    title: `${service.name} in ${location.name} | Compare Local Providers | Free Quotes`,
+    description: description,
   };
 }
 
@@ -46,6 +55,12 @@ export default function CityServicePage({ params }) {
     .map(name => getAllLocations().find(l => l.name === name))
     .filter(Boolean)
     .slice(0, 6);
+
+  // Generate unique content for this location-service combination
+  const localIntro = generateLocalIntro(location, service);
+  const treatmentContent = generateTreatmentLocalContent(location, service);
+  const whyChooseLocal = generateWhyChooseLocal(location, service);
+  const areaHighlights = generateAreaHighlights(location);
 
   return (
     <>
@@ -69,7 +84,7 @@ export default function CityServicePage({ params }) {
                 {service.name} in {location.name}
               </h1>
               <p className="text-xl text-primary-100 mb-6">
-                Compare verified {service.name.toLowerCase()} providers in {location.name} and the {location.borough} area. Get free quotes from qualified practitioners and find the best option for your needs and budget.
+                {localIntro}
               </p>
               
               <div className="flex flex-wrap gap-4 mb-6">
@@ -81,12 +96,16 @@ export default function CityServicePage({ params }) {
                   <span className="text-primary-200 text-sm">Timeline</span>
                   <div className="font-semibold">{service.timeline}</div>
                 </div>
+                <div className="bg-white/10 px-4 py-2 rounded-lg">
+                  <span className="text-primary-200 text-sm">Area</span>
+                  <div className="font-semibold">{location.borough}</div>
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-4 text-sm">
-                <span className="text-green-400">✓ Local {location.name} providers</span>
+                <span className="text-green-400">✓ Verified {location.name} providers</span>
                 <span className="text-green-400">✓ Free quotes</span>
-                <span className="text-green-400">✓ Verified practitioners</span>
+                <span className="text-green-400">✓ No obligation</span>
               </div>
             </div>
 
@@ -103,23 +122,64 @@ export default function CityServicePage({ params }) {
         </div>
       </section>
 
-      {/* Service + Location Overview */}
+      {/* Local Demand Section - NEW */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {service.name} in {location.name}
+            {service.name} in {location.name}: Local Demand
           </h2>
           <p className="text-gray-600 mb-6 text-lg">
+            {treatmentContent.localDemand}
+          </p>
+          <p className="text-gray-600 mb-6">
             {service.longDescription}
           </p>
-          <p className="text-gray-600">
-            {location.name} residents looking for {service.name.toLowerCase()} can connect with verified providers through this free comparison service. {location.businessContext} Compare quotes from multiple practitioners to find the right fit for your needs and budget.
+          
+          {/* Area Quick Facts */}
+          <div className="bg-gray-50 rounded-xl p-6 mt-8">
+            <h3 className="font-semibold text-gray-900 mb-4">About {location.name}</h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+              <div>
+                <span className="text-gray-500 block">Area Type</span>
+                <span className="font-medium text-gray-900">{areaHighlights.areaType}</span>
+              </div>
+              <div>
+                <span className="text-gray-500 block">Character</span>
+                <span className="font-medium text-gray-900 capitalize">{areaHighlights.character}</span>
+              </div>
+              <div>
+                <span className="text-gray-500 block">Population</span>
+                <span className="font-medium text-gray-900">{location.population}</span>
+              </div>
+              <div>
+                <span className="text-gray-500 block">Key Industries</span>
+                <span className="font-medium text-gray-900">{areaHighlights.keyIndustries}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Is This For - NEW */}
+      <section className="py-16 bg-primary-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Who Seeks {service.name} in {location.name}?
+          </h2>
+          <p className="text-gray-700 text-lg mb-6">
+            {treatmentContent.idealFor}
           </p>
+          <div className="bg-white rounded-xl p-6 shadow-sm">
+            <h3 className="font-semibold text-gray-900 mb-4">Why Choose a Local Provider</h3>
+            <p className="text-gray-600">
+              {treatmentContent.whyLocal}
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Benefits & Features */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -153,14 +213,14 @@ export default function CityServicePage({ params }) {
       </section>
 
       {/* Location Info Card */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">
-              About {location.name}
+              {location.name} at a Glance
             </h3>
-            <p className="text-gray-600 mb-4">
-              {location.description}
+            <p className="text-gray-600 mb-6">
+              {location.description} {location.businessContext}
             </p>
             <div className="grid sm:grid-cols-2 gap-4 text-sm">
               <div>
@@ -184,15 +244,29 @@ export default function CityServicePage({ params }) {
         </div>
       </section>
 
+      {/* Why Choose Local - ENHANCED */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Why Find a {service.name} Provider in {location.name}?
+          </h2>
+          <div className="prose prose-lg max-w-none text-gray-600 space-y-4">
+            {whyChooseLocal.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Areas Covered */}
       {nearbyLocations.length > 0 && (
         <section className="py-16 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
-              {service.name} in Nearby Areas
+              {service.name} Near {location.name}
             </h2>
             <p className="text-gray-600 mb-6">
-              Providers serving {location.name} often also cover these nearby areas. Compare {service.name.toLowerCase()} quotes in surrounding locations.
+              Providers in {location.name} often serve the wider {location.borough} area. If you're based in a neighbouring area, you may find convenient options nearby. Compare {service.name.toLowerCase()} providers in these surrounding locations:
             </p>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4">
               {nearbyLocations.map((nearby) => (
@@ -204,6 +278,7 @@ export default function CityServicePage({ params }) {
                   <span className="font-medium text-gray-900 hover:text-primary-600">
                     {service.name} in {nearby.name}
                   </span>
+                  <span className="block text-sm text-gray-500 mt-1">{nearby.borough}</span>
                 </Link>
               ))}
             </div>
@@ -211,44 +286,30 @@ export default function CityServicePage({ params }) {
         </section>
       )}
 
-      {/* Why Choose Local */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Why Find a {service.name} Provider in {location.name}?
-          </h2>
-          <div className="prose prose-lg max-w-none text-gray-600">
-            <p>
-              Choosing a local provider in {location.name} offers several advantages for your {service.name.toLowerCase()} treatment. Convenience is paramount – {service.timeline.toLowerCase().includes('month') ? 'treatments that span several months' : 'even single-session treatments'} benefit from having a practitioner close to home or work.
-            </p>
-            <p>
-              {location.name}'s excellent transport connections within {location.borough} make it easy to attend consultations and follow-up appointments. Local providers also understand the specific needs and preferences of {location.name} residents, often offering flexible scheduling to accommodate busy lifestyles.
-            </p>
-            <p>
-              By comparing quotes from multiple verified {service.name.toLowerCase()} providers in {location.name}, you can ensure you're getting competitive pricing without sacrificing quality. Each provider in the network has been verified for their qualifications, registrations, and insurance.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQs */}
       {faqs.length > 0 && (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">
-              {service.name} FAQs
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              {service.name} Questions from {location.name} Residents
             </h2>
+            <p className="text-gray-600 mb-8">
+              Common questions about {service.name.toLowerCase()} from people in {location.name} and the {location.borough} area.
+            </p>
             <FAQAccordion faqs={faqs.slice(0, 5)} />
           </div>
         </section>
       )}
 
       {/* Other Services in Location */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            Other Treatments in {location.name}
+            Other Cosmetic Treatments in {location.name}
           </h2>
+          <p className="text-gray-600 mb-6">
+            Beyond {service.name.toLowerCase()}, {location.name} residents have access to a full range of cosmetic treatments. Compare providers for these popular services:
+          </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {otherServices.map((s) => (
               <Link
@@ -273,11 +334,14 @@ export default function CityServicePage({ params }) {
       </section>
 
       {/* Same Service in Other Locations */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            {service.name} in Other London Areas
+            {service.name} Across London
           </h2>
+          <p className="text-gray-600 mb-6">
+            Compare {service.name.toLowerCase()} providers in other London boroughs and areas:
+          </p>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {getAllLocations()
               .filter(l => l.isBorough && l.slug !== location.slug)
@@ -291,6 +355,7 @@ export default function CityServicePage({ params }) {
                   <span className="font-medium text-gray-900 hover:text-primary-600">
                     {service.name} in {loc.name}
                   </span>
+                  <span className="block text-sm text-gray-500 mt-1">{loc.region}</span>
                 </Link>
               ))}
           </div>
@@ -309,16 +374,16 @@ export default function CityServicePage({ params }) {
       <section className="py-16 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Find {service.name} Providers in {location.name}
+            Ready to Find {service.name} Providers in {location.name}?
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Compare verified providers and get free quotes within 24 hours. No obligation.
+            Compare verified practitioners in {location.borough} and get free quotes within 24 hours. No obligation, no pressure.
           </p>
           <Link
             href="/free-quote"
             className="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg"
           >
-            Get Free Quotes →
+            Get Your Free {location.name} Quotes →
           </Link>
         </div>
       </section>
