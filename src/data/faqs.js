@@ -1,10 +1,10 @@
-// faqs.js - Frequently asked questions
+// faqs.js - Frequently asked questions for aesthetic treatments
 
 export const faqs = {
   general: [
     {
       question: 'How does this service work?',
-      answer: 'Simply fill in our quick quote form with your treatment requirements and location. We\'ll connect you with up to 3 verified cosmetic treatment providers in your area who will contact you with personalised quotes. You can then compare and choose the best option for you.'
+      answer: 'Simply fill in our quick quote form with your treatment requirements and location. We\'ll connect you with up to 3 verified aesthetic treatment providers in your area who will contact you with personalised quotes. You can then compare and choose the best option for you.'
     },
     {
       question: 'Is this service free to use?',
@@ -12,7 +12,7 @@ export const faqs = {
     },
     {
       question: 'How are providers verified?',
-      answer: 'All providers in our network are verified professionals with appropriate qualifications and registrations. Dental practitioners are registered with the GDC (General Dental Council) and aesthetic practitioners hold relevant qualifications and insurance.'
+      answer: 'All providers in our network are verified professionals with appropriate qualifications and registrations. Aesthetic practitioners hold relevant qualifications including Level 7 certifications, medical backgrounds, and comprehensive insurance.'
     },
     {
       question: 'How quickly will I receive quotes?',
@@ -28,54 +28,10 @@ export const faqs = {
     }
   ],
   treatments: {
-    'teeth-whitening': [
-      {
-        question: 'How long does professional teeth whitening last?',
-        answer: 'Professional teeth whitening results typically last between 6 months to 2 years, depending on your diet, oral hygiene, and lifestyle habits. Avoiding staining foods and drinks can help maintain results longer.'
-      },
-      {
-        question: 'Is teeth whitening safe?',
-        answer: 'Yes, when performed by qualified dental professionals using approved products, teeth whitening is very safe. Some temporary sensitivity is normal but usually subsides within a few days.'
-      },
-      {
-        question: 'What\'s the difference between in-clinic and at-home whitening?',
-        answer: 'In-clinic treatments use stronger whitening agents and produce faster, more dramatic results in a single session. At-home kits use custom-fitted trays with gentler formulas worn over several weeks.'
-      },
-      {
-        question: 'How white can my teeth get?',
-        answer: 'Results vary depending on your natural tooth colour and the type of staining. Most patients achieve 2-8 shades lighter. Your dentist will assess your teeth and give you realistic expectations.'
-      },
-      {
-        question: 'Can I whiten my teeth if I have crowns or veneers?',
-        answer: 'Whitening treatments only work on natural teeth. Crowns, veneers, and fillings won\'t change colour. Your dentist may recommend replacing these after whitening to match your new shade.'
-      }
-    ],
-    'invisalign': [
-      {
-        question: 'How long does Invisalign treatment take?',
-        answer: 'Treatment duration varies depending on the complexity of your case. Simple cases may take 6-12 months, while more complex cases can take 18-24 months. Your provider will give you a personalised timeline.'
-      },
-      {
-        question: 'Is Invisalign painful?',
-        answer: 'Most patients experience some pressure or mild discomfort when switching to a new set of aligners, which is a sign the treatment is working. This typically subsides within a few days.'
-      },
-      {
-        question: 'How often do I need to wear my aligners?',
-        answer: 'For best results, aligners should be worn for 20-22 hours per day. They should only be removed for eating, drinking anything other than water, and brushing your teeth.'
-      },
-      {
-        question: 'Can anyone get Invisalign?',
-        answer: 'Invisalign can treat most cases of misalignment, overcrowding, and bite issues. However, very complex cases may require traditional braces. A consultation will determine if you\'re a suitable candidate.'
-      },
-      {
-        question: 'Do I need to wear a retainer after Invisalign?',
-        answer: 'Yes, retainers are essential to maintain your results. Your provider will recommend either a permanent bonded retainer or removable retainers to wear at night.'
-      }
-    ],
     'botox': [
       {
         question: 'How long do Botox results last?',
-        answer: 'Botox results typically last 3-6 months. With regular treatments, some patients find results last longer as the muscles become trained to relax.'
+        answer: 'Botox results typically last 3-4 months. With regular treatments, some patients find results last longer as the muscles become trained to relax.'
       },
       {
         question: 'Will I look frozen or unnatural?',
@@ -94,185 +50,252 @@ export const faqs = {
         answer: 'You\'ll start to see results within 3-5 days, with full effects visible at around 14 days. Your practitioner may schedule a follow-up to assess results.'
       }
     ],
-    'dermal-fillers': [
-      {
-        question: 'How long do dermal fillers last?',
-        answer: 'Results typically last 6-18 months depending on the type of filler used, the treatment area, and your metabolism. Lip fillers tend to last 6-12 months, while cheek fillers may last longer.'
-      },
-      {
-        question: 'Are dermal fillers reversible?',
-        answer: 'Hyaluronic acid fillers can be dissolved with an enzyme called hyaluronidase if you\'re unhappy with results. This is one reason why HA fillers are the most popular choice.'
-      },
-      {
-        question: 'Is there any downtime after dermal fillers?',
-        answer: 'Most people return to normal activities immediately. Some swelling, redness, or bruising may occur but typically resolves within a few days. Avoid strenuous exercise for 24 hours.'
-      },
-      {
-        question: 'Can I combine dermal fillers with other treatments?',
-        answer: 'Yes, fillers are often combined with Botox and other treatments for comprehensive facial rejuvenation. Your practitioner will recommend the best approach for your goals.'
-      },
-      {
-        question: 'What areas can be treated with fillers?',
-        answer: 'Common treatment areas include lips, cheeks, nasolabial folds, marionette lines, chin, jawline, and under-eye hollows. Fillers can also be used for non-surgical nose reshaping.'
-      }
-    ],
-    'veneers': [
-      {
-        question: 'How long do veneers last?',
-        answer: 'Porcelain veneers typically last 10-15 years or longer with proper care. Composite veneers generally last 5-7 years. Regular dental check-ups and good oral hygiene extend their lifespan.'
-      },
-      {
-        question: 'Are veneers permanent?',
-        answer: 'Traditional veneers require removing some tooth enamel, making them a long-term commitment. Once placed, you\'ll always need veneers or another restoration on those teeth.'
-      },
-      {
-        question: 'Do veneers look natural?',
-        answer: 'High-quality porcelain veneers are designed to mimic natural teeth in colour, translucency, and texture. Skilled cosmetic dentists ensure veneers complement your facial features.'
-      },
-      {
-        question: 'Can I eat normally with veneers?',
-        answer: 'Yes, you can eat most foods normally. However, avoid biting directly into very hard foods like ice or using your teeth to open packages, as this can damage veneers.'
-      },
-      {
-        question: 'What\'s the difference between porcelain and composite veneers?',
-        answer: 'Porcelain veneers are more durable, stain-resistant, and natural-looking but cost more. Composite veneers are more affordable and require less tooth preparation but may need replacing sooner.'
-      }
-    ],
-    'dental-bonding': [
-      {
-        question: 'How long does dental bonding last?',
-        answer: 'Dental bonding typically lasts 3-10 years depending on the location, bite forces, and how well you care for your teeth. Touch-ups or replacements may be needed over time.'
-      },
-      {
-        question: 'Is dental bonding noticeable?',
-        answer: 'When performed by a skilled dentist, bonding blends seamlessly with your natural teeth. The composite resin is shade-matched to your surrounding teeth for natural results.'
-      },
-      {
-        question: 'Does dental bonding damage teeth?',
-        answer: 'No, bonding is one of the most conservative cosmetic treatments. It typically requires minimal or no removal of tooth enamel, preserving your natural tooth structure.'
-      },
-      {
-        question: 'Can bonding stain?',
-        answer: 'Composite resin can stain over time, especially from coffee, tea, wine, and smoking. However, stains are usually surface-level and can be polished away at dental visits.'
-      },
-      {
-        question: 'Is bonding better than veneers?',
-        answer: 'Bonding is better for minor imperfections and is more affordable and conservative. Veneers are better for more significant changes and last longer. Your dentist will recommend the best option.'
-      }
-    ],
-    'smile-makeover': [
-      {
-        question: 'What treatments are included in a smile makeover?',
-        answer: 'A smile makeover is customised to your needs and may include whitening, veneers, bonding, crowns, orthodontics, gum contouring, and other treatments. Your dentist will create a tailored plan.'
-      },
-      {
-        question: 'How long does a smile makeover take?',
-        answer: 'Timeline varies greatly depending on the treatments needed. Simple makeovers may take a few weeks, while comprehensive transformations involving orthodontics can take 12-18 months.'
-      },
-      {
-        question: 'How much does a smile makeover cost?',
-        answer: 'Costs range from £2,000 for simple makeovers to £15,000+ for comprehensive transformations. Most clinics offer payment plans. Getting quotes helps you understand your options.'
-      },
-      {
-        question: 'Can I see what my new smile will look like?',
-        answer: 'Yes, many clinics offer digital smile design technology that shows a preview of your potential results before treatment begins. This helps ensure you\'re happy with the planned outcome.'
-      },
-      {
-        question: 'Is a smile makeover worth it?',
-        answer: 'For many people, the confidence boost and improved quality of life make it absolutely worthwhile. A consultation will help you understand what\'s achievable within your budget.'
-      }
-    ],
     'lip-fillers': [
       {
         question: 'How long do lip fillers last?',
-        answer: 'Lip fillers typically last 6-12 months. The lips have high blood flow, so fillers tend to metabolise faster here than in other areas. Regular top-ups maintain results.'
+        answer: 'Lip fillers typically last 6-12 months, depending on the product used, your metabolism, and how much filler is placed. Most patients return for top-ups every 6-9 months.'
       },
       {
-        question: 'Will lip fillers look natural?',
-        answer: 'When administered by a skilled practitioner, lip fillers should look natural and proportionate to your face. Communication about your goals is key to achieving the look you want.'
+        question: 'Are lip fillers painful?',
+        answer: 'Most practitioners use topical numbing cream or nerve blocks to minimise discomfort. The fillers also contain lidocaine. Most patients describe it as mild discomfort rather than pain.'
       },
       {
-        question: 'How painful are lip injections?',
-        answer: 'Most patients describe the sensation as mild discomfort rather than pain. Topical numbing cream is applied beforehand, and most fillers contain lidocaine for additional comfort.'
+        question: 'Will my lips look natural?',
+        answer: 'With a skilled practitioner and appropriate amount of filler, results should look natural and proportionate to your face. Good practitioners focus on enhancing your natural shape.'
       },
       {
-        question: 'What\'s the recovery time for lip fillers?',
-        answer: 'Most people return to normal activities immediately. Swelling and bruising are common for 2-7 days. Final results are visible once swelling subsides, usually within 2 weeks.'
+        question: 'Can lip fillers be reversed?',
+        answer: 'Yes, hyaluronic acid fillers can be dissolved using an enzyme called hyaluronidase. This is one of the key advantages of HA fillers over other types.'
       },
       {
-        question: 'Can lip fillers be removed?',
-        answer: 'Yes, hyaluronic acid lip fillers can be dissolved with hyaluronidase if you\'re unhappy with results. The lips will return to their pre-treatment appearance.'
+        question: 'How much swelling should I expect?',
+        answer: 'Swelling is normal and usually peaks at 24-48 hours before gradually subsiding. Most swelling resolves within 1-2 weeks. Avoid judging results until swelling has fully settled.'
       }
     ],
-    'dental-crowns': [
+    'dermal-fillers': [
       {
-        question: 'How long do dental crowns last?',
-        answer: 'With proper care, dental crowns typically last 10-15 years or longer. Regular dental check-ups, good oral hygiene, and avoiding excessive force help extend their lifespan.'
+        question: 'How long do dermal fillers last?',
+        answer: 'Results typically last 9-18 months depending on the type of filler used, the treatment area, and your metabolism. Cheek and jawline fillers often last longer than lip fillers.'
       },
       {
-        question: 'Are dental crowns painful?',
-        answer: 'The procedure is performed under local anaesthetic, so you shouldn\'t feel pain. Some sensitivity or discomfort may occur after treatment but typically resolves within a few days.'
+        question: 'Are dermal fillers safe?',
+        answer: 'When administered by qualified practitioners using approved products, dermal fillers have an excellent safety profile. Choosing an experienced practitioner significantly reduces risks.'
       },
       {
-        question: 'What\'s the difference between a crown and a veneer?',
-        answer: 'Crowns cover the entire tooth and are used for damaged or weakened teeth. Veneers only cover the front surface and are primarily cosmetic. Your dentist will recommend the appropriate option.'
+        question: 'What\'s the difference between Botox and fillers?',
+        answer: 'Botox relaxes muscles to reduce wrinkles caused by facial expressions. Fillers add volume to replace lost tissue or enhance features. Many patients benefit from both treatments.'
       },
       {
-        question: 'Can a crowned tooth get a cavity?',
-        answer: 'The crown itself can\'t decay, but the tooth underneath can. Good oral hygiene and regular check-ups are essential to prevent decay at the crown margin.'
+        question: 'How much filler will I need?',
+        answer: 'This depends on your goals and starting point. A consultation will determine the right amount. Conservative practitioners often recommend starting with less and adding more if desired.'
       },
       {
-        question: 'How many visits does a crown require?',
-        answer: 'Traditional crowns require 2 visits: one for preparation and impressions, and another to fit the crown. Same-day crowns using CEREC technology can be completed in one visit.'
+        question: 'Is there any downtime?',
+        answer: 'Most patients experience minimal downtime. Swelling and bruising may occur but typically resolve within 1-2 weeks. Most people return to normal activities immediately.'
       }
     ],
-    'treatment-costs': [
+    'cheek-fillers': [
       {
-        question: 'Why do cosmetic treatment prices vary so much?',
-        answer: 'Prices vary based on practitioner experience, clinic location, materials used, and complexity of treatment. Higher prices often reflect premium materials and more experienced providers.'
+        question: 'How long do cheek fillers last?',
+        answer: 'Cheek fillers typically last 12-18 months due to the area having less movement than lips. Some volumising fillers can last even longer.'
       },
       {
-        question: 'Is cosmetic dentistry available on the NHS?',
-        answer: 'Generally, cosmetic treatments are not available on the NHS, which only covers clinically necessary dental work. Private treatment is required for purely aesthetic procedures.'
+        question: 'Will cheek fillers look obvious?',
+        answer: 'When done well, cheek fillers should restore a youthful appearance without looking overdone. The goal is to lift and contour subtly, not create obviously enhanced cheekbones.'
       },
       {
-        question: 'Are payment plans available?',
-        answer: 'Many clinics offer payment plans and finance options to spread the cost of treatment. Interest-free options are often available for shorter terms.'
+        question: 'Can cheek fillers lift my face?',
+        answer: 'Yes, strategic placement of cheek filler can provide a lifting effect, reducing the appearance of nasolabial folds and giving an overall more youthful appearance.'
       },
       {
-        question: 'What should be included in a treatment quote?',
-        answer: 'A comprehensive quote should include all costs: consultation, treatment, any necessary follow-ups, and materials. Ask about what\'s included to avoid unexpected charges.'
+        question: 'How many syringes will I need?',
+        answer: 'Most patients need 1-2 syringes per cheek for noticeable results. Your practitioner will assess your needs during consultation and recommend an appropriate amount.'
       },
       {
-        question: 'Is it worth paying more for experienced providers?',
-        answer: 'Experience often matters significantly in cosmetic treatments. Skilled practitioners typically achieve better, more natural results and can handle complications if they arise.'
+        question: 'Is the procedure painful?',
+        answer: 'Cheek filler injections are generally well-tolerated. Numbing cream is applied beforehand, and the filler contains anaesthetic. Most patients describe mild discomfort.'
       }
     ],
-    'dental-marketing': [
+    'jawline-fillers': [
       {
-        question: 'Why do dental practices need specialist marketing?',
-        answer: 'Dental marketing requires understanding of regulations, patient concerns, and effective messaging. Specialist marketers know how to attract patients while maintaining professional standards.'
+        question: 'How long do jawline fillers last?',
+        answer: 'Jawline fillers typically last 12-18 months. The jaw area has minimal movement, which helps fillers last longer than in more mobile areas.'
       },
       {
-        question: 'What marketing services do dental practices typically need?',
-        answer: 'Common services include SEO, Google Ads, social media management, website design, reputation management, and patient retention strategies.'
+        question: 'Can fillers give me a more defined jawline?',
+        answer: 'Yes, strategically placed filler can create a sharper, more defined jawline, improve profile, and reduce the appearance of jowls.'
       },
       {
-        question: 'How long before marketing shows results?',
-        answer: 'Paid advertising can generate leads immediately, while SEO typically takes 3-6 months to show significant results. A combined approach often works best.'
+        question: 'Is jawline filler suitable for men?',
+        answer: 'Absolutely. Jawline filler is very popular with men seeking a more defined, masculine jawline. Techniques are adapted to achieve appropriate results for male faces.'
       },
       {
-        question: 'How much should a dental practice spend on marketing?',
-        answer: 'Marketing budgets vary, but many successful practices invest 5-10% of revenue. The right budget depends on your growth goals and local competition.'
+        question: 'How much filler is needed for jawline?',
+        answer: 'Jawline treatment typically requires 2-4 syringes depending on the degree of enhancement desired. Your practitioner will discuss expectations during consultation.'
       },
       {
-        question: 'How do I measure marketing success?',
-        answer: 'Key metrics include new patient enquiries, website traffic, conversion rates, cost per acquisition, and return on investment. Good marketing agencies provide regular reporting.'
+        question: 'Can I combine jawline filler with chin filler?',
+        answer: 'Yes, combining jawline and chin filler often produces the best results for overall facial profile enhancement. Many practitioners recommend treating both areas together.'
+      }
+    ],
+    'tear-trough-fillers': [
+      {
+        question: 'Are tear trough fillers safe?',
+        answer: 'Tear trough treatment requires advanced skill due to the delicate under-eye area. When performed by experienced practitioners, it\'s safe, but choosing the right provider is crucial.'
+      },
+      {
+        question: 'How long do tear trough fillers last?',
+        answer: 'Tear trough fillers typically last 9-12 months. The under-eye area has minimal movement, which helps maintain results.'
+      },
+      {
+        question: 'Will it help my dark circles?',
+        answer: 'Tear trough filler can significantly improve dark circles caused by hollowing and shadowing. However, pigmentation-related dark circles may require other treatments.'
+      },
+      {
+        question: 'What are the risks of tear trough filler?',
+        answer: 'Risks include bruising, swelling, and rarely, complications like Tyndall effect (bluish tint). Choosing an experienced practitioner minimises these risks significantly.'
+      },
+      {
+        question: 'How much filler is needed?',
+        answer: 'Tear troughs require very small amounts of filler - typically 0.5-1ml for both eyes. Conservative treatment is essential to avoid overfilling.'
+      }
+    ],
+    'chemical-peels': [
+      {
+        question: 'What skin concerns can chemical peels treat?',
+        answer: 'Chemical peels can address acne, acne scarring, fine lines, pigmentation, sun damage, uneven texture, and overall dull skin. Different peels target different concerns.'
+      },
+      {
+        question: 'How much downtime is there?',
+        answer: 'Downtime depends on peel depth. Superficial peels have minimal downtime (slight redness), while medium peels may cause peeling for 5-7 days.'
+      },
+      {
+        question: 'Are chemical peels safe for dark skin?',
+        answer: 'Yes, but careful selection of peel type is essential. Experienced practitioners choose appropriate peels to minimise risk of post-inflammatory hyperpigmentation.'
+      },
+      {
+        question: 'How many treatments will I need?',
+        answer: 'A course of 3-6 treatments spaced 2-4 weeks apart is typically recommended for best results, though some improvement is seen after one treatment.'
+      },
+      {
+        question: 'Can I wear makeup after a peel?',
+        answer: 'For superficial peels, makeup can usually be applied after 24 hours. Deeper peels require longer healing before makeup. Your practitioner will advise on aftercare.'
+      }
+    ],
+    'microneedling': [
+      {
+        question: 'What does microneedling treat?',
+        answer: 'Microneedling is effective for acne scars, fine lines, enlarged pores, stretch marks, uneven skin texture, and overall skin rejuvenation.'
+      },
+      {
+        question: 'Is microneedling painful?',
+        answer: 'Topical numbing cream is applied before treatment, making it comfortable. Most patients describe a scratchy or prickly sensation during treatment.'
+      },
+      {
+        question: 'How many sessions do I need?',
+        answer: 'Most patients see best results from a course of 3-6 treatments, spaced 4-6 weeks apart. Maintenance treatments every 6-12 months help maintain results.'
+      },
+      {
+        question: 'What\'s the downtime?',
+        answer: 'Expect redness similar to sunburn for 24-48 hours. Most patients are socially presentable within 2-3 days. Full healing takes about a week.'
+      },
+      {
+        question: 'Can I combine microneedling with other treatments?',
+        answer: 'Yes, microneedling is often combined with PRP (vampire facial), vitamin serums, or followed by chemical peels for enhanced results.'
+      }
+    ],
+    'profhilo': [
+      {
+        question: 'What is Profhilo?',
+        answer: 'Profhilo is an injectable treatment containing high-concentration hyaluronic acid that spreads beneath the skin to hydrate and stimulate collagen and elastin production.'
+      },
+      {
+        question: 'How is Profhilo different from fillers?',
+        answer: 'Unlike fillers, Profhilo doesn\'t add volume or structure. It remodels the skin from within, improving hydration, firmness, and overall skin quality.'
+      },
+      {
+        question: 'How many treatments do I need?',
+        answer: 'The standard protocol is 2 sessions, 4 weeks apart. Maintenance treatments every 6 months help sustain results.'
+      },
+      {
+        question: 'What areas can be treated?',
+        answer: 'Profhilo is most commonly used on the face, but is also excellent for the neck, hands, décolletage, and areas showing skin laxity.'
+      },
+      {
+        question: 'When will I see results?',
+        answer: 'Initial hydration is noticeable within days, but the bio-remodelling effects develop over 4-8 weeks as collagen and elastin production increases.'
+      }
+    ],
+    'fat-dissolving': [
+      {
+        question: 'How do fat dissolving injections work?',
+        answer: 'Fat dissolving injections use deoxycholic acid to break down fat cell membranes. The destroyed fat cells are then naturally eliminated by the body over several weeks.'
+      },
+      {
+        question: 'Is the fat loss permanent?',
+        answer: 'Yes, once fat cells are destroyed, they cannot return. However, maintaining a healthy weight is important as remaining fat cells can still enlarge.'
+      },
+      {
+        question: 'How many sessions are needed?',
+        answer: 'Most patients need 2-4 sessions, spaced 4-6 weeks apart. The number depends on the amount of fat and desired results.'
+      },
+      {
+        question: 'What areas can be treated?',
+        answer: 'Common areas include double chin, jowls, bra fat, love handles, and inner thighs. It\'s designed for small, stubborn fat pockets, not overall weight loss.'
+      },
+      {
+        question: 'What is the recovery like?',
+        answer: 'Expect significant swelling for 3-5 days, with some lasting up to 2 weeks. Bruising, tenderness, and numbness are also common but temporary.'
+      }
+    ],
+    'laser-hair-removal': [
+      {
+        question: 'Is laser hair removal permanent?',
+        answer: 'Laser hair removal provides long-term hair reduction, with most patients seeing 70-90% permanent reduction. Some maintenance sessions may be needed.'
+      },
+      {
+        question: 'How many sessions will I need?',
+        answer: 'Most areas require 6-8 sessions for optimal results, spaced 4-6 weeks apart for body areas and 4 weeks for facial hair.'
+      },
+      {
+        question: 'Is laser hair removal painful?',
+        answer: 'Most patients describe it as a rubber band snapping sensation. Modern machines have cooling systems that make treatment comfortable.'
+      },
+      {
+        question: 'Does it work on all skin types?',
+        answer: 'Modern laser technology (especially Nd:YAG) can safely treat all skin types including darker skin tones. Choose a clinic with appropriate equipment.'
+      },
+      {
+        question: 'Can I have laser hair removal on any area?',
+        answer: 'Most body areas can be treated, including face, underarms, bikini line, legs, back, and chest. Specific areas can be discussed during consultation.'
+      }
+    ],
+    'prp-facial': [
+      {
+        question: 'What is PRP?',
+        answer: 'PRP (Platelet-Rich Plasma) uses concentrated platelets from your own blood, which contain growth factors that stimulate collagen production and cell renewal.'
+      },
+      {
+        question: 'Is PRP safe?',
+        answer: 'Because PRP uses your own blood, there\'s no risk of allergic reaction or rejection. It\'s a very safe treatment when performed in sterile conditions.'
+      },
+      {
+        question: 'How long do PRP results last?',
+        answer: 'Results develop over 3-6 months as collagen production increases and typically last 12-18 months. Maintenance treatments can extend results.'
+      },
+      {
+        question: 'What\'s the downtime?',
+        answer: 'When combined with microneedling, expect redness for 24-48 hours. Injection-only PRP has minimal downtime with possible small bruises at injection sites.'
+      },
+      {
+        question: 'How many treatments are recommended?',
+        answer: 'A course of 3 treatments spaced 4-6 weeks apart is typically recommended for optimal results, with maintenance treatments annually.'
       }
     ]
   }
 };
 
+// Helper functions
 export function getGeneralFaqs() {
   return faqs.general;
 }
