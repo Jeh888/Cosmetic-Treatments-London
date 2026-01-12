@@ -2,7 +2,6 @@ import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
 import ServiceCard from '@/components/ServiceCard';
 import ReviewCard from '@/components/ReviewCard';
-import StatsBar from '@/components/StatsBar';
 import FAQAccordion from '@/components/FAQAccordion';
 import { services } from '@/data/services';
 import { getBoroughs } from '@/data/locations';
@@ -16,9 +15,8 @@ export default function HomePage() {
 
   return (
     <>
-     {/* Hero Section */}
+      {/* Hero Section */}
       <section className="relative bg-gray-900 text-white overflow-hidden">
-        {/* Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069')" }}
@@ -37,20 +35,18 @@ export default function HomePage() {
               
               <div className="flex flex-wrap gap-6 mb-8 text-gray-300">
                 <span>Free quotes</span>
-                <span>•</span>
+                <span className="text-gray-500">|</span>
                 <span>Verified providers</span>
-                <span>•</span>
+                <span className="text-gray-500">|</span>
                 <span>No obligation</span>
               </div>
 
-              {/* Trust badges */}
               <div className="flex items-center space-x-6 text-sm text-gray-400">
-                <div className="flex items-center space-x-1">
-                  <span className="text-yellow-400">★★★★★</span>
-                  <span>4.9/5 Rating</span>
-                </div>
-                <span>500+ Providers</span>
-                <span>24hr Response</span>
+                <div>4.9/5 Rating</div>
+                <span className="text-gray-600">|</span>
+                <div>500+ Providers</div>
+                <span className="text-gray-600">|</span>
+                <div>24hr Response</div>
               </div>
             </div>
 
@@ -66,10 +62,31 @@ export default function HomePage() {
       </section>
 
       {/* Stats Bar */}
-      <StatsBar />
+      <section className="bg-primary-600 py-6">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div>
+              <div className="text-2xl md:text-3xl font-bold text-white">500+</div>
+              <div className="text-primary-100 text-sm">Verified Providers</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold text-white">100+</div>
+              <div className="text-primary-100 text-sm">London Locations</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold text-white">4.9</div>
+              <div className="text-primary-100 text-sm">Average Rating</div>
+            </div>
+            <div>
+              <div className="text-2xl md:text-3xl font-bold text-white">24hr</div>
+              <div className="text-primary-100 text-sm">Response Time</div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Services Section */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
@@ -135,14 +152,14 @@ export default function HomePage() {
               href="/free-quote"
               className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition text-lg"
             >
-              Get Your Free Quote →
+              Get Your Free Quote
             </Link>
           </div>
         </div>
       </section>
 
       {/* Featured Locations */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
@@ -173,21 +190,21 @@ export default function HomePage() {
               href="/locations"
               className="text-primary-600 font-semibold hover:text-primary-700 transition"
             >
-              View All 100+ Locations →
+              View All 100+ Locations
             </Link>
           </div>
         </div>
       </section>
 
       {/* Reviews Section */}
-      <section className="py-16 md:py-24 bg-gray-100">
+      <section className="py-16 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
               What Patients Say
             </h2>
             <p className="text-xl text-gray-600">
-              Thousands have found their perfect cosmetic treatment provider through this service
+              Thousands have found their perfect cosmetic treatment provider
             </p>
           </div>
 
@@ -202,14 +219,14 @@ export default function HomePage() {
               href="/reviews"
               className="text-primary-600 font-semibold hover:text-primary-700 transition"
             >
-              Read More Reviews →
+              Read More Reviews
             </Link>
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
@@ -227,26 +244,26 @@ export default function HomePage() {
               href="/faq"
               className="text-primary-600 font-semibold hover:text-primary-700 transition"
             >
-              View All FAQs →
+              View All FAQs
             </Link>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary-600 to-primary-800 text-white">
+      <section className="py-16 md:py-24 bg-gray-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
             Ready to Transform Your Smile?
           </h2>
-          <p className="text-xl text-primary-100 mb-8">
+          <p className="text-xl text-gray-300 mb-8">
             Get free quotes from verified cosmetic treatment providers in your area. Compare prices, read reviews, and find the perfect provider for your needs.
           </p>
           <Link
             href="/free-quote"
-            className="inline-block bg-white text-primary-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg"
+            className="inline-block bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transition text-lg"
           >
-            Get Free Quotes Now →
+            Get Free Quotes Now
           </Link>
         </div>
       </section>
