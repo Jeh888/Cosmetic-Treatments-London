@@ -4,7 +4,7 @@ import { getAllReviews, getAverageRating } from '@/data/reviews';
 
 export const metadata = {
   title: 'Patient Reviews | Cosmetic Treatments London | Testimonials',
-  description: 'Read reviews from patients who found cosmetic treatment providers through this comparison service. Real testimonials about teeth whitening, Botox, fillers and more.',
+  description: 'Read reviews from patients who found aesthetic treatment providers through this comparison service. Real testimonials about Botox, fillers, skin treatments and more.',
 };
 
 export default function ReviewsPage() {
