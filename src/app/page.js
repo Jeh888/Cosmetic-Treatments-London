@@ -16,42 +16,41 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+     {/* Hero Section */}
+      <section className="relative bg-gray-900 text-white overflow-hidden">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=2069')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70" />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold leading-tight mb-6">
-                Find the Best <span className="text-primary-300">Cosmetic Treatments</span> in London
+                Find the Best Cosmetic Treatments in London
               </h1>
-              <p className="text-xl text-primary-100 mb-8">
+              <p className="text-xl text-gray-300 mb-8">
                 Compare top-rated providers for teeth whitening, Invisalign, Botox, fillers, veneers, and more. Get free quotes from verified practitioners across 100+ London locations.
               </p>
               
-              <div className="flex flex-wrap gap-4 mb-8">
-                <div className="flex items-center space-x-2">
-                  <span className="text-green-400">✓</span>
-                  <span>Free quotes</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-green-400">✓</span>
-                  <span>Verified providers</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <span className="text-green-400">✓</span>
-                  <span>No obligation</span>
-                </div>
+              <div className="flex flex-wrap gap-6 mb-8 text-gray-300">
+                <span>Free quotes</span>
+                <span>•</span>
+                <span>Verified providers</span>
+                <span>•</span>
+                <span>No obligation</span>
               </div>
 
               {/* Trust badges */}
-              <div className="flex items-center space-x-6 text-sm text-primary-200">
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
                 <div className="flex items-center space-x-1">
                   <span className="text-yellow-400">★★★★★</span>
                   <span>4.9/5 Rating</span>
                 </div>
-                <div>500+ Providers</div>
-                <div>24hr Response</div>
+                <span>500+ Providers</span>
+                <span>24hr Response</span>
               </div>
             </div>
 
