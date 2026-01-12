@@ -3,14 +3,14 @@ import LeadForm from '@/components/LeadForm';
 import { services } from '@/data/services';
 
 export const metadata = {
-  title: 'Cosmetic Treatments London | Compare All Treatments | Free Quotes',
-  description: 'Browse all cosmetic treatments available in London. Compare teeth whitening, Invisalign, Botox, dermal fillers, veneers, lip fillers, and more. Get free quotes from verified providers.',
+  title: 'Aesthetic Treatments London | Compare All Treatments | Free Quotes',
+  description: 'Browse all aesthetic treatments available in London. Compare Botox, dermal fillers, lip fillers, skin treatments, and more. Get free quotes from verified providers.',
 };
 
 export default function TreatmentsPage() {
-  const dentalTreatments = services.filter(s => s.category === 'dental');
-  const aestheticTreatments = services.filter(s => s.category === 'aesthetic');
-  const otherServices = services.filter(s => !['dental', 'aesthetic'].includes(s.category));
+  const injectables = services.filter(s => s.category === 'injectables');
+  const skinTreatments = services.filter(s => s.category === 'skin');
+  const bodyTreatments = services.filter(s => s.category === 'body');
 
   return (
     <>
@@ -30,22 +30,22 @@ export default function TreatmentsPage() {
           </nav>
           
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            Cosmetic Treatments
+            Aesthetic Treatments
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl">
-            Compare verified providers for all cosmetic dental and aesthetic treatments across London. Get free quotes and find the right provider for your needs.
+            Compare verified providers for all aesthetic treatments across London. Get free quotes and find the right practitioner for your needs.
           </p>
         </div>
       </section>
 
-      {/* Dental Treatments */}
+      {/* Injectable Treatments */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Cosmetic Dental Treatments</h2>
-          <p className="text-gray-600 mb-8">Transform your smile with professional dental treatments from qualified practitioners.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Injectable Treatments</h2>
+          <p className="text-gray-600 mb-8">Anti-wrinkle injections and dermal fillers to enhance and rejuvenate your appearance.</p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dentalTreatments.map((service) => (
+            {injectables.map((service) => (
               <Link
                 key={service.slug}
                 href={`/${service.slug}`}
@@ -67,14 +67,14 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      {/* Aesthetic Treatments */}
+      {/* Skin Treatments */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Aesthetic Treatments</h2>
-          <p className="text-gray-600 mb-8">Non-surgical treatments to enhance your natural beauty and reduce signs of ageing.</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">Skin Treatments</h2>
+          <p className="text-gray-600 mb-8">Professional skin rejuvenation treatments to improve texture, tone, and radiance.</p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aestheticTreatments.map((service) => (
+            {skinTreatments.map((service) => (
               <Link
                 key={service.slug}
                 href={`/${service.slug}`}
@@ -96,15 +96,15 @@ export default function TreatmentsPage() {
         </div>
       </section>
 
-      {/* Other Services */}
-      {otherServices.length > 0 && (
+      {/* Body Treatments */}
+      {bodyTreatments.length > 0 && (
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Other Services</h2>
-            <p className="text-gray-600 mb-8">Additional resources and services to help you on your cosmetic treatment journey.</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Body Treatments</h2>
+            <p className="text-gray-600 mb-8">Non-surgical body contouring and hair removal treatments.</p>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {otherServices.map((service) => (
+              {bodyTreatments.map((service) => (
                 <Link
                   key={service.slug}
                   href={`/${service.slug}`}
