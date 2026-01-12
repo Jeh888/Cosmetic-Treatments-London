@@ -60,9 +60,9 @@ export default function CityPage({ params }) {
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
                 Cosmetic Treatments in {location.name}
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                Compare verified cosmetic dentists and aesthetic clinics in {location.name}. Get free quotes within 2 hours.
-              </p>
+           <p className="text-xl text-gray-300 mb-8">
+  {locationData?.heroIntro || `Compare verified cosmetic dentists and aesthetic clinics in ${location.name}. Get free quotes within 2 hours.`}
+</p>
               
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-4">
