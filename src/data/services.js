@@ -6,7 +6,7 @@ export const services = [
     name: 'Botox',
     shortDescription: 'Anti-wrinkle injections to smooth fine lines and prevent ageing signs',
     description: 'Reduce fine lines and wrinkles with Botox treatments from qualified practitioners. Compare clinics offering anti-wrinkle injections for forehead lines, crow\'s feet, and frown lines with natural-looking results.',
-    longDescription: 'Botox (botulinum toxin) is the world\'s most popular non-surgical cosmetic treatment, temporarily relaxing facial muscles to smooth out wrinkles and fine lines. When administered by trained practitioners, Botox provides natural-looking results that can take years off your appearance. The treatment is quick - typically 15-30 minutes - with minimal discomfort and no downtime. Results typically last 3-4 months, with many clients finding treatments last longer over time. Common treatment areas include forehead lines, frown lines (glabellar lines), crow\'s feet, bunny lines, and can also address issues like gummy smile, jawline slimming, and excessive sweating.',
+    longDescription: 'Botox (botulinum toxin) is the world\'s most popular non-surgical cosmetic treatment, temporarily relaxing facial muscles to smooth out wrinkles and fine lines. When administered by trained practitioners, Botox provides natural-looking results that can take years off your appearance. The treatment is quick - typically 15-30 minutes - with minimal discomfort and no downtime. Results typically last 3-4 months, with many clients finding treatments last longer over time. Common treatment areas include forehead lines, frown lines (glabellar lines), crow\'s feet, bunny lines, and can also address issues like lip flip, jawline slimming, and excessive sweating.',
     benefits: [
       'Visible reduction in fine lines and wrinkles',
       'Quick 15-30 minute treatment',
@@ -14,7 +14,7 @@ export const services = [
       'Natural-looking results when done well',
       'Prevents formation of new wrinkles',
       'Results last 3-4 months',
-      'Can slim jawline and treat teeth grinding',
+      'Can slim jawline and treat jaw clenching',
       'Treats excessive sweating (hyperhidrosis)'
     ],
     features: [
@@ -49,7 +49,7 @@ export const services = [
     ],
     features: [
       'Detailed consultation and lip assessment',
-      'Topical or dental block anaesthesia',
+      'Topical or nerve block anaesthesia',
       'Premium hyaluronic acid fillers (Juvederm, Restylane)',
       'Precise injection techniques for natural results',
       'Aftercare guidance and support',
