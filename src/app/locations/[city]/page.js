@@ -4,6 +4,7 @@ import LeadForm from '@/components/LeadForm';
 import FAQAccordion from '@/components/FAQAccordion';
 import { getAllLocations, getLocationBySlug, getLocationsByBorough, getAllLocationSlugs } from '@/data/locations';
 import { services } from '@/data/services';
+import { getLocationData } from '@/data/contentGenerator';
 
 export async function generateStaticParams() {
   return getAllLocationSlugs().map((slug) => ({ city: slug }));
@@ -21,11 +22,11 @@ export async function generateMetadata({ params }) {
 
 export default function CityPage({ params }) {
   const location = getLocationBySlug(params.city);
-  
+  const locationData = getLocationData(params.city);
+
   if (!location) {
     notFound();
   }
-
   const nearbyLocations = location.nearbyAreas
     .map(name => getAllLocations().find(l => l.name === name))
     .filter(Boolean)
@@ -91,20 +92,67 @@ export default function CityPage({ params }) {
         </div>
       </section>
 
-      {/* About Area */}
-      <section className="py-12 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
-            About {location.name}
-          </h2>
-          <p className="text-gray-600 mb-4">
-            {location.description}
-          </p>
-          <p className="text-gray-600">
-            {location.businessContext} With a population of approximately {location.population}, {location.name} is home to a diverse community seeking quality cosmetic treatments.
-          </p>
-        </div>
-      </section>
+   {/* Why Cosmetic Treatments Matter Here */}
+      {locationData && (
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12">
+              <div>
+                <p className="text-primary-600 text-sm font-semibold tracking-wide uppercase mb-2">
+                  Why Cosmetic Treatments in {location.name}
+                </p>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                  {locationData.subHeadline}
+                </h2>
+                <p className="text-gray-600 mb-4">{locationData.paragraph1}</p>
+                <p className="text-gray-600 mb-6">{locationData.paragraph2}</p>
+                <ul className="space-y-3">
+                  {locationData.facts.map((fact, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-primary-600 mt-1">✓</span>
+                      <span className="text-gray-600">{fact}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="bg-gray-900 text-white rounded-2xl p-8">
+                <h3 className="text-lg font-semibold mb-6">{location.name} at a Glance</h3>
+                <div className="space-y-4">
+                  <div className="flex justify-between border-b border-gray-700 pb-3">
+                    <span className="text-gray-400">Population</span>
+                    <span className="font-semibold">{locationData.glance.population}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-3">
+                    <span className="text-gray-400">Borough</span>
+                    <span className="font-semibold">{locationData.glance.borough}</span>
+                  </div>
+                  <div className="flex justify-between border-b border-gray-700 pb-3">
+                    <span className="text-gray-400">Key Demographics</span>
+                    <span className="font-semibold text-right text-sm">{locationData.glance.keyDemographics}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-400">Main Areas</span>
+                    <span className="font-semibold text-right text-sm">{locationData.glance.mainAreas}</span>
+                  </div>
+                </div>
+                
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-4 mt-8">
+                  <div className="bg-gray-800 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-primary-400">46%</div>
+                    <div className="text-xs text-gray-400">of searches have local intent</div>
+                  </div>
+                  <div className="bg-gray-800 rounded-lg p-4 text-center">
+                    <div className="text-2xl font-bold text-primary-400">88%</div>
+                    <div className="text-xs text-gray-400">call within 24hrs</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Available Services */}
       <section className="py-16 bg-gray-50">
