@@ -44,30 +44,39 @@ export default function CityPage({ params }) {
 
   return (
     <>
-      {/* Hero - ~80 words */}
-      <section className="bg-gradient-to-br from-primary-900 to-primary-800 text-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+       {/* Hero - ~80 words */}
+      <section className="relative bg-gray-900 text-white py-16 md:py-20">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center opacity-30"
+          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2068')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 to-gray-900/70" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <nav className="text-primary-200 text-sm mb-4">
+              <nav className="text-gray-300 text-sm mb-4">
                 <Link href="/" className="hover:text-white">Home</Link>
-                <span className="mx-2">→</span>
+                <span className="mx-2">/</span>
                 <Link href="/locations" className="hover:text-white">Locations</Link>
-                <span className="mx-2">→</span>
-                <span>{location.name}</span>
+                <span className="mx-2">/</span>
+                <span className="text-white">{location.name}</span>
               </nav>
               
               <h1 className="text-4xl md:text-5xl font-display font-bold mb-6">
                 Cosmetic Treatments in {location.name}
               </h1>
-              <p className="text-xl text-primary-100 mb-6">
+              <p className="text-xl text-gray-300 mb-6">
                 Compare verified cosmetic treatment providers in {location.name} and the surrounding {location.borough} area. Get free quotes for teeth whitening, Invisalign, Botox, dermal fillers, veneers, and more from qualified local practitioners.
               </p>
               
-              <div className="flex items-center space-x-4 text-sm">
-                <span className="text-green-400">✓ Local providers</span>
-                <span className="text-green-400">✓ Free quotes</span>
-                <span className="text-green-400">✓ Verified practitioners</span>
+              <div className="flex items-center space-x-6 text-sm text-gray-300">
+                <span>Local providers</span>
+                <span>•</span>
+                <span>Free quotes</span>
+                <span>•</span>
+                <span>Verified practitioners</span>
               </div>
             </div>
 
@@ -82,7 +91,6 @@ export default function CityPage({ params }) {
           </div>
         </div>
       </section>
-
       {/* City Overview - ~100 words */}
       <section className="py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
