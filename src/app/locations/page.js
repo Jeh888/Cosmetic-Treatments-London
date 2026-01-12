@@ -5,7 +5,7 @@ import { services } from '@/data/services';
 
 export const metadata = {
   title: 'Cosmetic Treatments Locations | All London Areas | Free Quotes',
-  description: 'Find cosmetic treatment providers across 100+ London locations. Compare teeth whitening, Invisalign, Botox, fillers, and more in your area.',
+  description: 'Find aesthetic treatment providers across 100+ London locations. Compare Botox, fillers, skin treatments, and more in your area.',
 };
 
 export default function LocationsPage() {
