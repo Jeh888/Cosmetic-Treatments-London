@@ -132,19 +132,6 @@ export default function CityServicePage({ params }) {
         </div>
       </section>
 
-      {/* Treatment Context Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
-            About {service.name} Treatment
-          </h2>
-          <div className="prose prose-lg max-w-none text-gray-600 space-y-6">
-            <p>{treatmentContext}</p>
-            <p>{service.longDescription}</p>
-          </div>
-        </div>
-      </section>
-
       {/* Benefits & Features */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
