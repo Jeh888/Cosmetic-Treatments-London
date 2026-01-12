@@ -6,6 +6,7 @@ import { getAllLocations, getLocationBySlug, getLocationsByBorough, getAllLocati
 import { services } from '@/data/services';
 import { getLocationData } from '@/data/contentGenerator';
 
+
 export async function generateStaticParams() {
   return getAllLocationSlugs().map((slug) => ({ city: slug }));
 }
