@@ -10,25 +10,32 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {/* Brand */}
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+          {/* Brand & Address */}
+          <div className="lg:col-span-2">
             <Link href="/" className="flex items-center mb-4">
               <span className="font-display text-xl font-bold text-white">
                 CosmeticTreatments<span className="text-primary-400">.london</span>
               </span>
             </Link>
-            <p className="text-sm text-gray-400 mb-4">
-              Compare top-rated cosmetic treatment providers across London. Get free quotes from verified practitioners for teeth whitening, Invisalign, Botox, fillers, and more.
+            <p className="text-sm text-gray-400 mb-6">
+              Compare top-rated cosmetic treatment providers across London. Get free quotes from verified practitioners.
             </p>
-            <p className="text-sm text-gray-500">
-              Serving all London boroughs and surrounding areas
-            </p>
+            
+            {/* Physical Address */}
+            <div className="text-sm text-gray-400">
+              <p className="font-semibold text-white mb-2">Our Office</p>
+              <p>Cosmetic Treatment</p>
+              <p>Devonshire House</p>
+              <p>582 Honeypot Lane</p>
+              <p>Stanmore</p>
+              <p>HA7 4WU</p>
+            </div>
           </div>
 
           {/* Treatments */}
           <div>
-            <h3 className="font-semibold text-white mb-4">Popular Treatments</h3>
+            <h3 className="font-semibold text-white mb-4">Treatments</h3>
             <ul className="space-y-2">
               {featuredServices.map((service) => (
                 <li key={service.slug}>
@@ -42,10 +49,10 @@ export default function Footer() {
               ))}
               <li>
                 <Link 
-                  href="/free-quote"
+                  href="/treatments"
                   className="text-primary-400 hover:text-primary-300 transition text-sm font-semibold"
                 >
-                  View All Treatments →
+                  View All →
                 </Link>
               </li>
             </ul>
@@ -53,7 +60,7 @@ export default function Footer() {
 
           {/* Locations */}
           <div>
-            <h3 className="font-semibold text-white mb-4">London Boroughs</h3>
+            <h3 className="font-semibold text-white mb-4">Locations</h3>
             <ul className="space-y-2">
               {featuredBoroughs.map((borough) => (
                 <li key={borough.slug}>
@@ -70,7 +77,7 @@ export default function Footer() {
                   href="/locations"
                   className="text-primary-400 hover:text-primary-300 transition text-sm font-semibold"
                 >
-                  View All 100+ Locations →
+                  View All →
                 </Link>
               </li>
             </ul>
