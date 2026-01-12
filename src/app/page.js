@@ -254,7 +254,7 @@ export default function HomePage() {
             href="/free-quote"
             className="inline-block bg-accent-500 text-white px-10 py-5 rounded-lg font-bold hover:bg-accent-600 transition text-xl shadow-lg hover:shadow-xl"
           >
-            Get My Free Quotes Now →
+            Get 3 Free Quotes Now →
           </Link>
           <p className="mt-4 text-gray-400 text-sm">No spam. No obligation. Just quotes from top clinics.</p>
         </div>
