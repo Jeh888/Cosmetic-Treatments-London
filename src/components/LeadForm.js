@@ -53,35 +53,27 @@ export default function LeadForm({
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const isDark = variant === 'hero';
-  const bgClass = isDark ? 'bg-gray-800/50 backdrop-blur' : 'bg-white shadow-lg';
-  const textClass = isDark ? 'text-white' : 'text-gray-900';
-  const subtextClass = isDark ? 'text-gray-300' : 'text-gray-600';
-  const inputClass = isDark 
-    ? 'bg-gray-700/50 border-gray-600 text-white placeholder-gray-400 focus:border-primary-400 focus:ring-primary-400'
-    : 'bg-white border-gray-300 text-gray-900 placeholder-gray-400 focus:border-primary-500 focus:ring-primary-500';
-
   if (submitted) {
     return (
-      <div className={`${bgClass} rounded-2xl p-8 text-center`}>
-        <div className="w-16 h-16 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+      <div className="bg-white rounded-2xl p-8 text-center shadow-2xl">
+        <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className={`text-2xl font-bold ${textClass} mb-2`}>Thank You!</h3>
-        <p className={subtextClass}>
-          Your quote request has been submitted. Top-rated providers in your area will contact you shortly with personalised quotes.
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+        <p className="text-gray-600">
+          Your quote request has been submitted. Expect calls from top providers within 2 hours.
         </p>
       </div>
     );
   }
 
   return (
-    <div className={`${bgClass} rounded-2xl p-6 md:p-8`}>
+    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-2xl">
       <div className="text-center mb-6">
-        <h3 className={`text-xl md:text-2xl font-bold ${textClass}`}>{title}</h3>
-        <p className={`${subtextClass} mt-1`}>{subtitle}</p>
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900">{title}</h3>
+        <p className="text-gray-600 mt-1">{subtitle}</p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -93,7 +85,7 @@ export default function LeadForm({
             required
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-lg border ${inputClass} focus:outline-none focus:ring-2`}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-primary-500 focus:ring-primary-500"
           />
         </div>
 
@@ -105,7 +97,7 @@ export default function LeadForm({
             required
             value={formData.phone}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-lg border ${inputClass} focus:outline-none focus:ring-2`}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-primary-500 focus:ring-primary-500"
           />
           <input
             type="email"
@@ -114,7 +106,7 @@ export default function LeadForm({
             required
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-lg border ${inputClass} focus:outline-none focus:ring-2`}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-primary-500 focus:ring-primary-500"
           />
         </div>
 
@@ -124,7 +116,7 @@ export default function LeadForm({
             required
             value={formData.service}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-lg border ${inputClass} focus:outline-none focus:ring-2`}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:border-primary-500 focus:ring-primary-500"
           >
             <option value="">Select Treatment *</option>
             {services.map((service) => (
@@ -141,7 +133,7 @@ export default function LeadForm({
             required
             value={formData.location}
             onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-lg border ${inputClass} focus:outline-none focus:ring-2`}
+            className="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 focus:outline-none focus:ring-2 focus:border-primary-500 focus:ring-primary-500"
           >
             <option value="">Select Location *</option>
             {locations.map((location) => (
@@ -152,17 +144,6 @@ export default function LeadForm({
           </select>
         </div>
 
-        <div>
-          <textarea
-            name="message"
-            placeholder="Tell us more about what you're looking for (optional)"
-            rows={3}
-            value={formData.message}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 rounded-lg border ${inputClass} focus:outline-none focus:ring-2 resize-none`}
-          />
-        </div>
-
         {error && (
           <p className="text-red-500 text-sm">{error}</p>
         )}
@@ -170,14 +151,31 @@ export default function LeadForm({
         <button
           type="submit"
           disabled={submitting}
-          className="w-full bg-primary-600 text-white py-4 rounded-lg font-semibold hover:bg-primary-700 transition disabled:opacity-50 disabled:cursor-not-allowed"
+          className="w-full bg-accent-500 text-white py-4 rounded-lg font-bold text-lg hover:bg-accent-600 transition disabled:opacity-50 disabled:cursor-not-allowed shadow-lg hover:shadow-xl"
         >
-          {submitting ? 'Submitting...' : 'Get Free Quotes'}
+          {submitting ? 'Submitting...' : 'Get My Free Quotes →'}
         </button>
 
-        <p className={`text-xs ${subtextClass} text-center`}>
-          Free quotes | No obligation | Verified providers
-        </p>
+        <div className="flex items-center justify-center space-x-4 text-xs text-gray-500">
+          <span className="flex items-center">
+            <svg className="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            100% Free
+          </span>
+          <span className="flex items-center">
+            <svg className="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            No Spam
+          </span>
+          <span className="flex items-center">
+            <svg className="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            2hr Response
+          </span>
+        </div>
       </form>
     </div>
   );
