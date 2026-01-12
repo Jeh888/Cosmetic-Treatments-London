@@ -1410,6 +1410,165 @@ export const locations = [
     nearbyAreas: ['Battersea', 'Vauxhall', 'Pimlico', 'Kennington'],
     landmarks: ['Battersea Power Station', 'US Embassy', 'New Covent Garden Market'],
     isBorough: false
+  },
+
+  // KENSINGTON & CHELSEA BOROUGH
+  {
+    name: 'Chelsea',
+    slug: 'chelsea',
+    borough: 'Kensington & Chelsea',
+    region: 'Central London',
+    population: '85,000',
+    description: 'Chelsea is one of London\'s most affluent areas, famous for the King\'s Road and its upscale residential streets.',
+    businessContext: 'Wealthy residents expect premium cosmetic treatments with absolute discretion.',
+    industries: ['Fashion', 'Art', 'Finance', 'Professional Services'],
+    nearbyAreas: ['Kensington', 'Fulham', 'Battersea', 'Knightsbridge'],
+    landmarks: ['King\'s Road', 'Sloane Square', 'Chelsea Physic Garden'],
+    isBorough: false
+  },
+  {
+    name: 'Kensington',
+    slug: 'kensington',
+    borough: 'Kensington & Chelsea',
+    region: 'Central London',
+    population: '156,000',
+    description: 'Kensington is one of London\'s most prestigious areas, home to world-class museums and embassies.',
+    businessContext: 'International and affluent residents demand the highest quality cosmetic services.',
+    industries: ['Diplomatic', 'Finance', 'Art', 'Professional Services'],
+    nearbyAreas: ['Chelsea', 'Notting Hill', 'Earl\'s Court', 'Knightsbridge'],
+    landmarks: ['Kensington Palace', 'Natural History Museum', 'High Street Kensington'],
+    isBorough: true
+  },
+
+  // HAMMERSMITH & FULHAM
+  {
+    name: 'Fulham',
+    slug: 'fulham',
+    borough: 'Hammersmith & Fulham',
+    region: 'West London',
+    population: '95,000',
+    description: 'Fulham is a family-friendly area with excellent schools and riverside properties.',
+    businessContext: 'Affluent families invest in comprehensive aesthetic treatments.',
+    industries: ['Professional Services', 'Media', 'Education', 'Retail'],
+    nearbyAreas: ['Chelsea', 'Putney', 'Hammersmith', 'Parsons Green'],
+    landmarks: ['Fulham Palace', 'Bishop\'s Park', 'Craven Cottage'],
+    isBorough: false
+  },
+
+  // HACKNEY
+  {
+    name: 'Hackney',
+    slug: 'hackney',
+    borough: 'Hackney',
+    region: 'East London',
+    population: '280,000',
+    description: 'Hackney has transformed into one of London\'s most creative and desirable areas.',
+    businessContext: 'Creative professionals seek contemporary cosmetic treatments.',
+    industries: ['Creative Industries', 'Technology', 'Media', 'Hospitality'],
+    nearbyAreas: ['Shoreditch', 'Dalston', 'Stoke Newington', 'Homerton'],
+    landmarks: ['Broadway Market', 'Victoria Park', 'Hackney Empire'],
+    isBorough: true
+  },
+
+  // SOUTHWARK
+  {
+    name: 'Peckham',
+    slug: 'peckham',
+    borough: 'Southwark',
+    region: 'South London',
+    population: '72,000',
+    description: 'Peckham is a vibrant, diverse area with a thriving art scene and strong community.',
+    businessContext: 'Diverse population seeks accessible cosmetic treatments from culturally competent providers.',
+    industries: ['Creative Industries', 'Retail', 'Hospitality', 'Healthcare'],
+    nearbyAreas: ['Camberwell', 'Dulwich', 'New Cross', 'Brixton'],
+    landmarks: ['Rye Lane', 'Peckham Rye Park', 'Bussey Building'],
+    isBorough: false
+  },
+  {
+    name: 'Dulwich',
+    slug: 'dulwich',
+    borough: 'Southwark',
+    region: 'South London',
+    population: '42,000',
+    description: 'Dulwich is a leafy, village-like area known for excellent schools and the Dulwich Picture Gallery.',
+    businessContext: 'Affluent families prioritise quality aesthetic treatments.',
+    industries: ['Education', 'Professional Services', 'Healthcare', 'Retail'],
+    nearbyAreas: ['Peckham', 'Forest Hill', 'Crystal Palace', 'Herne Hill'],
+    landmarks: ['Dulwich Picture Gallery', 'Dulwich Park', 'Dulwich College'],
+    isBorough: false
+  },
+
+  // GREENWICH
+  {
+    name: 'Greenwich',
+    slug: 'greenwich',
+    borough: 'Greenwich',
+    region: 'South East London',
+    population: '290,000',
+    description: 'Greenwich is a World Heritage Site with historic attractions and riverside setting.',
+    businessContext: 'Quality-focused residents seek professional cosmetic services.',
+    industries: ['Tourism', 'Education', 'Maritime', 'Professional Services'],
+    nearbyAreas: ['Blackheath', 'Deptford', 'Woolwich', 'Lewisham'],
+    landmarks: ['Royal Observatory', 'Cutty Sark', 'Greenwich Market'],
+    isBorough: true
+  },
+
+  // ISLINGTON
+  {
+    name: 'Islington',
+    slug: 'islington',
+    borough: 'Islington',
+    region: 'North London',
+    population: '240,000',
+    description: 'Islington is an affluent area known for its Georgian architecture and vibrant Upper Street.',
+    businessContext: 'Professional residents expect sophisticated cosmetic treatment options.',
+    industries: ['Media', 'Law', 'Finance', 'Creative Industries'],
+    nearbyAreas: ['Angel', 'Highbury', 'Canonbury', 'Holloway'],
+    landmarks: ['Upper Street', 'Angel Station', 'Emirates Stadium'],
+    isBorough: true
+  },
+
+  // RICHMOND
+  {
+    name: 'Richmond',
+    slug: 'richmond',
+    borough: 'Richmond upon Thames',
+    region: 'South West London',
+    population: '198,000',
+    description: 'Richmond is one of London\'s most desirable areas with its riverside setting and vast park.',
+    businessContext: 'Affluent residents invest in premium cosmetic treatments.',
+    industries: ['Professional Services', 'Retail', 'Hospitality', 'Healthcare'],
+    nearbyAreas: ['Twickenham', 'Kew', 'Barnes', 'Kingston'],
+    landmarks: ['Richmond Park', 'Richmond Bridge', 'Richmond Green'],
+    isBorough: true
+  },
+  {
+    name: 'Wimbledon',
+    slug: 'wimbledon',
+    borough: 'Merton',
+    region: 'South West London',
+    population: '68,000',
+    description: 'Wimbledon is famous for the tennis championships and offers village charm with excellent transport links.',
+    businessContext: 'Affluent families seek quality cosmetic treatments from trusted providers.',
+    industries: ['Professional Services', 'Retail', 'Education', 'Hospitality'],
+    nearbyAreas: ['Merton', 'Raynes Park', 'Southfields', 'Putney'],
+    landmarks: ['All England Club', 'Wimbledon Common', 'Wimbledon Village'],
+    isBorough: false
+  },
+
+  // KINGSTON
+  {
+    name: 'Kingston',
+    slug: 'kingston',
+    borough: 'Kingston upon Thames',
+    region: 'South West London',
+    population: '175,000',
+    description: 'Kingston upon Thames is a historic market town with excellent shopping and riverside setting.',
+    businessContext: 'Family-focused residents seek comprehensive aesthetic services.',
+    industries: ['Retail', 'Education', 'Professional Services', 'Hospitality'],
+    nearbyAreas: ['Surbiton', 'New Malden', 'Richmond', 'Wimbledon'],
+    landmarks: ['Kingston Market', 'Bentall Centre', 'Hampton Court Palace'],
+    isBorough: true
   }
 ];
 
