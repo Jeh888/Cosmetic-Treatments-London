@@ -57,9 +57,9 @@ export default function HomePage() {
               {/* Social Proof */}
               <div className="flex items-center space-x-3">
                 <div className="flex -space-x-2">
-                  <div className="w-10 h-10 rounded-full bg-gray-300 border-2 border-white"></div>
-                  <div className="w-10 h-10 rounded-full bg-gray-400 border-2 border-white"></div>
-                  <div className="w-10 h-10 rounded-full bg-gray-500 border-2 border-white"></div>
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
+                  <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" className="w-10 h-10 rounded-full border-2 border-white object-cover" />
                   <div className="w-10 h-10 rounded-full bg-primary-500 border-2 border-white flex items-center justify-center text-xs font-bold">+99</div>
                 </div>
                 <div className="text-sm text-gray-300">
@@ -73,43 +73,6 @@ export default function HomePage() {
                 title="Get 3 Free Quotes"
                 subtitle="Top clinics will call you within 2 hours"
               />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* As Seen In / Trust Bar */}
-      <section className="bg-white py-6 border-b">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-8 text-gray-400">
-            <span className="text-sm font-medium">Featured in:</span>
-            <span className="text-xl font-serif font-bold">Evening Standard</span>
-            <span className="text-xl font-bold">TimeOut</span>
-            <span className="text-xl font-serif">Tatler</span>
-            <span className="text-xl font-bold tracking-tight">METRO</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="bg-primary-600 py-6">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-white">500+</div>
-              <div className="text-primary-100 text-sm">Verified Providers</div>
-            </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-white">100+</div>
-              <div className="text-primary-100 text-sm">London Locations</div>
-            </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-white">4.9</div>
-              <div className="text-primary-100 text-sm">Average Rating</div>
-            </div>
-            <div>
-              <div className="text-2xl md:text-3xl font-bold text-white">24hr</div>
-              <div className="text-primary-100 text-sm">Response Time</div>
             </div>
           </div>
         </div>
