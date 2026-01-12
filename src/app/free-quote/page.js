@@ -2,7 +2,7 @@ import LeadForm from '@/components/LeadForm';
 
 export const metadata = {
   title: 'Get Free Quotes | Cosmetic Treatments London | Compare Providers',
-  description: 'Get free quotes from verified cosmetic treatment providers across London. Compare prices for teeth whitening, Invisalign, Botox, fillers, veneers and more.',
+  description: 'Get free quotes from verified aesthetic treatment providers across London. Compare prices for Botox, dermal fillers, lip fillers, skin treatments and more.',
 };
 
 export default function FreeQuotePage() {
@@ -71,15 +71,15 @@ export default function FreeQuotePage() {
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="font-semibold text-gray-900 mb-3">Treatments Covered</h3>
                 <div className="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div>• Teeth Whitening</div>
-                  <div>• Invisalign</div>
                   <div>• Botox</div>
-                  <div>• Dermal Fillers</div>
-                  <div>• Veneers</div>
-                  <div>• Dental Bonding</div>
                   <div>• Lip Fillers</div>
-                  <div>• Dental Crowns</div>
-                  <div>• Smile Makeovers</div>
+                  <div>• Dermal Fillers</div>
+                  <div>• Cheek Fillers</div>
+                  <div>• Jawline Fillers</div>
+                  <div>• Tear Trough</div>
+                  <div>• Chemical Peels</div>
+                  <div>• Microneedling</div>
+                  <div>• Profhilo</div>
                   <div>• And more...</div>
                 </div>
               </div>
